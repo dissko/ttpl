@@ -21,23 +21,25 @@
 				<AboutDropdown />
 			</li>
 			<a href="/activities">Activities</a>
-			<a href="/">Events</a>
-			<a href="/">Resources</a>
-			<a href="/">Contact</a>
+			<a href="/evnts">Events</a>
+			<a href="/resources">Resources</a>
+			<a href="/contact">Contact</a>
 		</ul>
 	</div>
 
-	<!-- Theme Switcher (Dev Only) -->
-	<ThemeDropdown {changeTheme} />
 </nav>
 
 <!-- Desktop Navbar -->
 <nav class="bg-base-200 hidden justify-center md:flex py-2">
 	<div class="hidden gap-2 md:flex">
+		<a class="btn btn-ghost btn-sm" href="/">Home</a>
 		<AboutDropdown />
 		<a class="btn btn-ghost btn-sm" href="/activities">Activities</a>
-		<a class="btn btn-ghost btn-sm" href="/">Events</a>
-		<a class="btn btn-ghost btn-sm" href="/">Resources</a>
-		<a class="btn btn-ghost btn-sm" href="/">Contact</a>
+		<a class="btn btn-ghost btn-sm" href="/events">Events</a>
+		<a class="btn btn-ghost btn-sm" href="/resources">Resources</a>
+		<a class="btn btn-ghost btn-sm" href="/contact">Contact</a>
+		
+	<!-- Theme Switcher (Dev Only) -->
+	<ThemeDropdown {changeTheme} />
 	</div>
 </nav>

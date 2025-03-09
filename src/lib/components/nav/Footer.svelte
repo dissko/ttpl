@@ -36,10 +36,10 @@
         <li>
           <p>About</p>
           <ul class="ml-4 text-sm">
-            <li><a href="/about/board">Library Board</a></li>
-            <li><a href="/about/faq">FAQ</a></li>
-            <li><a href="/about/services">Services</a></li>
-            <li><a href="/about/calendar">Calendar</a></li>
+            <li><a href="/board">Library Board</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/calendar">Calendar</a></li>
           </ul>
         </li>
         <li><a href="/activities">Activities</a></li>
