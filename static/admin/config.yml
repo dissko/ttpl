@@ -1,9 +1,7 @@
-# when using the default proxy server port
-local_backend: true
-
 backend:
   name: github
   repo: nicksalt/ttpl
+  branch: main
 
 
 media_folder: "static/images/uploads"
