@@ -15,16 +15,17 @@
 			<i class="fa-solid fa-bars text-xl"></i>
 		</button>
 
-		<ul tabIndex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-64 gap-2 p-4 shadow">
-			<li><a href="/">Home</a></li>
-			<li>
-				<AboutDropdown />
-			</li>
-			<a href="/activities">Activities</a>
-			<a href="/evnts">Events</a>
-			<a href="/resources">Resources</a>
-			<a href="/contact">Contact</a>
-		</ul>
+<ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-64 gap-2 p-4 shadow">
+  <li><a href="/">Home</a></li>
+  <li>
+    <!-- Ensure AboutDropdown returns a clickable element -->
+    <AboutDropdown />
+  </li>
+  <li><a href="/activities">Activities</a></li>
+  <li><a href="/events">Events</a></li>
+  <li><a href="/resources">Resources</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
 	</div>
 
 </nav>
