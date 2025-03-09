@@ -25,5 +25,7 @@
 
 <!-- Include Navbar and Footer -->
 <Header {changeTheme} />
-<slot />
+<div class="px-2">
+  <slot />
+<\div>
 <Footer />
