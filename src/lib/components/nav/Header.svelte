@@ -11,11 +11,11 @@
 	</a>
 
 	<div class="dropdown dropdown-end md:hidden">
-		<button class="btn btn-ghost" aria-label="Menu">
+		<button tabIndex="0" class="btn btn-ghost" aria-label="Menu">
 			<i class="fa-solid fa-bars text-xl"></i>
 		</button>
 
-		<ul class="dropdown-content menu bg-base-200 rounded-box z-[1] w-64 gap-2 p-4 shadow">
+		<ul tabIndex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-64 gap-2 p-4 shadow">
 			<li><a href="/">Home</a></li>
 			<li>
 				<AboutDropdown />
