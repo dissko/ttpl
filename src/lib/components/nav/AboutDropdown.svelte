@@ -9,11 +9,11 @@
 </script>
 
 <div class="dropdown dropdown-end">
-	<button class="btn btn-ghost btn-sm">
+	<button tabIndex="0" class="btn btn-ghost btn-sm">
 		About
 		<i class="fa-solid fa-chevron-down"></i>
 	</button>
-	<ul class="dropdown-content menu bg-base-200 rounded-box z-[1] w-56 gap-2 p-6 shadow">
+	<ul tabIndex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-56 gap-2 p-6 shadow">
 		{#each items as item}
 			<li><a href={item.href}>{item.label}</a></li>
 		{/each}
