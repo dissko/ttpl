@@ -1,4 +1,3 @@
-<!-- src/lib/components/ActivityItem.svelte -->
 <script lang="ts">
     export let title: string;
     export let subtitle: string = "";

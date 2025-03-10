@@ -50,6 +50,15 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
 
+  - name: "faq"
+    label: "FAQ"
+    folder: "content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer",  name: 'answer', widget: 'markdown' , required: true }
+
   - name: "featured"
     label: "Featured Content"
     folder: "content/featured"

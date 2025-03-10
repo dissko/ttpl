@@ -2,23 +2,15 @@
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
 	import FaqSection from '$lib/components/faq/FaqSection.svelte';
     import PageHeader from '$lib/components/PageHeader.svelte';
-	import Page from '../+page.svelte';
-	const faqs = [
-		{
-			question: 'How do I create an account?',
-			answer:
-				"Click the 'Sign Up' button in the top right corner and follow the registration process."
-		},
-		{
-			question: 'I forgot my password. What should I do?',
-			answer:
-				"Click on 'Forgot Password' on the login page and follow the instructions sent to your email."
-		},
-		{
-			question: 'How do I update my profile information?',
-			answer: "Go to 'My Account' settings and select 'Edit Profile' to make changes."
-		}
-	];
+
+	export let data: {
+		faqs: {
+			question: string;
+			answer: string;
+		}[];
+	};
+
+	const { faqs } = data;
 </script>
 
 <main class="bg-base-100 min-h-screen">
