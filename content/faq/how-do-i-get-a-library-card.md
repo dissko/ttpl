@@ -1,5 +1,5 @@
 ---
-title: How do I get a library card?
+question: How do I get a library card?
 answer: >-
   Library cards can only be obtained in person, as you must present valid proof
   of address and photo ID, as well as sign your card.
