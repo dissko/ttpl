@@ -6,6 +6,11 @@ backend:
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dk3keqspt
+    api_key: 132597831268894
 
 collections:
   - name: "homepage"
@@ -39,9 +44,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Schedule", name: "schedule", widget: "string" }
+      - { label: "Order On Activities Page", name: "order", widget: "number", required: true }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "featured"
     label: "Featured Content"
