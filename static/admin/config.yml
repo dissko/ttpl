@@ -54,7 +54,7 @@ collections:
     label: "FAQ"
     folder: "content/faq"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.question}}"
     fields:
       - { label: "Question", name: "question", widget: "string" }
       - { label: "Answer",  name: 'answer', widget: 'markdown' , required: true }

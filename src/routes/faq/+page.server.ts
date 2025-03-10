@@ -1,23 +1,23 @@
-// src/routes/activities/+page.server.ts
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
 export async function load() {
-	const activitiesDir = path.resolve('content/faq');
+	const faqDir = path.resolve('content/faq');
     // if the directory doesn't exist, return an empty array
-    if (!fs.existsSync(activitiesDir)) {
-        return { activities: [] };
+    if (!fs.existsSync(faqDir)) {
+        console.error('No FAQs directory found');
+        return { faqs: [] };
     }
-	const files = fs.readdirSync(activitiesDir);
+	const files = fs.readdirSync(faqDir);
 
     // if files is empty, return an empty array
     if (!files.length) {
-        return { activities: [] };
+        return { faqs: [] };
     }
-	const activities = files
+	const faqs = files
 		.map((filename) => {
-			const filePath = path.join(activitiesDir, filename);
+			const filePath = path.join(faqDir, filename);
 			const fileContent = fs.readFileSync(filePath, 'utf-8');
 			const { data } = matter(fileContent);
 
@@ -26,6 +26,8 @@ export async function load() {
                 answer: data.answer
 			};
 		})
+        // order by question alphabetically
+        .sort((a, b) => a.question.localeCompare(b.question));
 
-	return { activities };
+	return { faqs: faqs };
 }
