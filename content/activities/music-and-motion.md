@@ -9,4 +9,5 @@ description: Music and Motion fills the library with an atmosphere of joy,
   Participants experience interactive sessions that promote vocabulary
   development and self-expression.
 reverse: false
+order: 2
 ---
