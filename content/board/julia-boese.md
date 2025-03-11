@@ -1,5 +1,5 @@
 ---
 name: Julia Boese
-role: Board Members
+role: Board Member
 order: 2
 ---
