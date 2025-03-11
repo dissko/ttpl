@@ -2,7 +2,7 @@
   <script>
     import PageHeader from "$lib/components/PageHeader.svelte";
   </script>
-  <main class="bg-base-100 min-h-screen">
+  <main class="bg-base-100">
     <!-- Hero Section -->
      <PageHeader title="Calendar" subtitle="Stay up to date with our events and programs." bgClass="bg-primary" />
   

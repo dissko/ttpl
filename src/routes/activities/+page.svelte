@@ -11,6 +11,7 @@
 			description?: string;
 			image?: string;
 			link?: string;
+			buttonText: string;
 		}[];
 	};
 
@@ -36,6 +37,7 @@
 					image={activity.image}
 					reverse={index % 2 !== 0}
 					link={activity.link}
+					buttonText={activity.buttonText}
 				/>
 			{/each}
 		</div>

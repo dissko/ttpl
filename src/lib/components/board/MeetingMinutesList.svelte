@@ -1,7 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+	import MeetingMinuteItem from './MeetingMinuteItem.svelte';
     
-    export let minutes: { date: string; fileLink: string; title: string }[];
+    export let minutes: { date: string; fileLink: string; }[];
   
     let filteredMinutes = [...minutes];
     let searchYear = "";
@@ -17,12 +18,6 @@
       currentPage = 1; // Reset to first page when filtering
     }
   
-    function paginateMinutes() {
-      const start = (currentPage - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      return filteredMinutes.slice(start, end);
-    }
-  
     function nextPage() {
       if (currentPage * itemsPerPage < filteredMinutes.length) {
         currentPage++;
@@ -34,6 +29,11 @@
         currentPage--;
       }
     }
+     // ✅ Reactive paginated list
+    $: paginatedMinutes = filteredMinutes.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
   </script>
   
   <section class="py-8">
@@ -52,15 +52,10 @@
   
     <!-- Meeting Minutes List -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {#each paginateMinutes() as minute}
-        <div class="card bg-base-100 shadow-md p-4">
-          <h3 class="card-title">{minute.title}</h3>
-          <p class="text-sm text-gray-600">{minute.date}</p>
-          <div class="card-actions justify-end">
-            <a href={minute.fileLink} target="_blank" class="btn btn-primary btn-sm">Download</a>
-          </div>
-        </div>
-      {/each}
+      {#each paginatedMinutes as minute (minute.date)}
+      <MeetingMinuteItem date={minute.date} fileLink={minute.fileLink} />
+    {/each}
+    
     </div>
   
 

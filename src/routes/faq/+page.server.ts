@@ -3,17 +3,23 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export async function load() {
-	const faqDir = path.resolve('content/faq');
     // if the directory doesn't exist, return an empty array
+    const faqs = await loadFaq();
+
+	return { faqs: faqs };
+}
+
+async function loadFaq(){
+	const faqDir = path.resolve('content/faq');
     if (!fs.existsSync(faqDir)) {
         console.error('No FAQs directory found');
-        return { faqs: [] };
+        return [];
     }
 	const files = fs.readdirSync(faqDir);
 
     // if files is empty, return an empty array
     if (!files.length) {
-        return { faqs: [] };
+        return [];
     }
 	const faqs = files
 		.map((filename) => {
@@ -29,5 +35,5 @@ export async function load() {
         // order by question alphabetically
         .sort((a, b) => a.question.localeCompare(b.question));
 
-	return { faqs: faqs };
+	return faqs;
 }

@@ -21,6 +21,7 @@ export async function load() {
 				link: data.link || '',
 				reverse: !!data.reverse,
                 order: data.order,
+				buttonText: data.buttonText || 'Learn More',
 			};
 		})
         .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999));

@@ -25,39 +25,6 @@ collections:
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
       - { label: "Button URL", name: "buttonUrl", widget: "string", required: false }
 
-  - name: "events"
-    label: "Events"
-    folder: "content/events"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "activities"
-    label: "Activities"
-    folder: "content/activities"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Order On Activities Page", name: "order", widget: "number", required: true }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "faq"
-    label: "FAQ"
-    folder: "content/faq"
-    create: true
-    slug: "{{fields.question}}"
-    fields:
-      - { label: "Question", name: "question", widget: "string" }
-      - { label: "Answer",  name: 'answer', widget: 'markdown' , required: true }
 
   - name: "featured"
     label: "Featured Content"
@@ -80,6 +47,95 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         multiple: true
+    
+
+  - name: "activities"
+    label: "Activities"
+    folder: "content/activities"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Order On Activities Page", name: "order", widget: "number", required: true }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+
+    
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+
+  - name: "faq"
+    label: "FAQ"
+    folder: "content/faq"
+    create: true
+    slug: "{{fields.question}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer",  name: 'answer', widget: 'markdown' , required: true }
+
+  - name: "board"
+    label: "Board Members"
+    folder: "content/board"
+    create: true
+    slug: "{{fields.name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
+
+  - name: "policies"
+    label: "Library Policies"
+    folder: "content/policies"
+    create: true
+    slug: "{{fields.name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "PDF File", name: "pdf", widget: "file" }
+
+  - name: "meetingMinutes"
+    label: "Meeting Minutes"
+    folder: "content/meeting-minutes"  # Folder where individual meeting files will be stored
+    create: true                       # Allows adding new meeting minutes via the CMS
+    identifier_field: "date"           # Use the date field as the identifier in the preview card
+    slug: "{{date}}"                   # File name will be the full date (YYYY-MM-DD)
+    preview_path: "{{date}}"   
+    fields:
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        time_format: false             # Disable time picker since only date is needed
+        date_format: "YYYY-MM-DD"       # Display format: Year-Month-Day (e.g., 2023-04-15)
+        format: "YYYY-MM-DD"            # Stored value is also in the "YYYY-MM-DD" format
+      - label: "PDF File"
+        name: "fileLink"
+        widget: "file"
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"  # Folder where individual meeting files will be stored
+    create: true                       # Allows adding new meeting minutes via the CMS
+    identifier_field: "title"           # Use the date field as the identifier in the preview card
+    slug: "{{title}}"                   # File name will be the full date (YYYY-MM-DD)
+    preview_path: "{{title}}"   
+    fields:
+      - { Label: "Icon Class", name: "icon", widget: "string", hint: "Use a Font Awesome icon class (e.g., 'fa-solid fa-comments'). Browse: https://fontawesome.com/icons to find an icon." }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Button Link", name: "link", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
+      - { label: "Button Text", name: "buttonText", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
+
 
 
   # Add additional collections (activities, resources, faq, etc.) as needed.

@@ -11,7 +11,7 @@ import PageHeader from '$lib/components/PageHeader.svelte';
 	bgClass="bg-primary"
 />
 
-<main class="bg-base-100 min-h-screen py-8">
+<main class="bg-base-100 min-h-screen p-8">
 	<MaxWidthContainer>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 			<!-- Left Column: Library Information -->

@@ -4,6 +4,7 @@
     export let image: string | undefined;
     export let description: string | undefined;
     export let link: string | undefined;
+    export let buttonText: string;
   // If reverse is true, the image appears on the right on large screens.
   export let reverse: boolean = false;
 </script>
@@ -24,7 +25,7 @@
       {/if}
       <p class="mt-4">{description}</p>
       {#if link}
-        <a href={link} class="btn btn-primary mt-4">Learn More</a>
+        <a href={link} class="btn btn-primary mt-4">{buttonText}</a>
       {/if}
     </div>
   </div>
