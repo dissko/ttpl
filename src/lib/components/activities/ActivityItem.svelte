@@ -21,7 +21,7 @@
     <div class="w-full lg:w-1/2">
       <h2 class="text-4xl font-bold">{title}</h2>
       {#if subtitle}
-        <h3 class="text-2xl text-primary mt-2">{subtitle}</h3>
+        <h3 class="text-2xl text-secondary mt-2">{subtitle}</h3>
       {/if}
       <p class="mt-4">{description}</p>
       {#if link}

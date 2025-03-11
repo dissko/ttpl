@@ -1,7 +1,7 @@
 <script>
 	import ThemeDropdown from "$lib/components/nav/ThemeDropdown.svelte";
 	import AboutDropdown from "$lib/components/nav/AboutDropdown.svelte";
-	export let changeTheme;
+	// export let changeTheme;
 	</script>
 
 <!-- Mobile Navbar -->
@@ -41,6 +41,6 @@
 		<a class="btn btn-ghost btn-sm" href="/contact">Contact</a>
 		
 	<!-- Theme Switcher (Dev Only) -->
-	<ThemeDropdown {changeTheme} />
+	<!-- <ThemeDropdown {changeTheme} /> -->
 	</div>
 </nav>

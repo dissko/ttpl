@@ -1,7 +1,22 @@
 <script lang="ts">
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
-import PageHeader from '$lib/components/PageHeader.svelte';
+	import PageHeader from '$lib/components/PageHeader.svelte';
 	import ContactInfo from '$lib/components/contact/ContactInfo.svelte';
+
+	// The contact data loaded from the server is available as `data.contact`
+	export let data: {
+		contact: {
+			streetAddress: string;
+			cityProvince: string;
+			postalCode: string;
+			email: string;
+			phone: string;
+			facebook: string;
+			instagram: string;
+			tiktok: string;
+			pinterest: string;
+		};
+	};
 </script>
 
 <!-- Page Header -->
@@ -11,12 +26,12 @@ import PageHeader from '$lib/components/PageHeader.svelte';
 	bgClass="bg-primary"
 />
 
-<main class="bg-base-100 min-h-screen p-8">
+<main class="bg-base-100 p-8">
 	<MaxWidthContainer>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 			<!-- Left Column: Library Information -->
 			<section>
-				<ContactInfo />
+				<ContactInfo contact={data.contact} />
 			</section>
 
 			<!-- Right Column: Google Map -->

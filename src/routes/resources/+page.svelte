@@ -156,7 +156,7 @@
     subtitle="Access our comprehensive electronic resources and reference tools." 
     bgClass="bg-primary" />
   
-  <main class="bg-base-100 min-h-screen py-8">
+  <main class="bg-base-100 py-8">
     <div class="container mx-auto px-4">
       <ResourceList {resources} />
     </div>

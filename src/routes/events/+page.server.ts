@@ -3,19 +3,20 @@ import fs from 'fs';
 import matter from 'gray-matter';
 
 export async function load() {
-    const services = await loadServices();
+    const events = await loadEvents();
 
-    return { services: services };
+    return { events: events };
 }
 
-async function loadServices() {
-    const servicesDir = path.resolve('content/services');
+
+async function loadEvents() {
+    const eventsDir = path.resolve('content/events');
     // if the directory doesn't exist, return an empty array
-    if (!fs.existsSync(servicesDir)) {
-        console.error('No Services directory found');
+    if (!fs.existsSync(eventsDir)) {
+        console.error('No Events directory found');
         return [];
     }
-    const files = fs.readdirSync(servicesDir);
+    const files = fs.readdirSync(eventsDir);
 
     // if files is empty, return an empty array
     if (!files.length) {
@@ -23,18 +24,20 @@ async function loadServices() {
     }
     return files
         .map((filename) => {
-            const filePath = path.join(servicesDir, filename);
+            const filePath = path.join(eventsDir, filename);
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const { data } = matter(fileContent);
 
             return {
                 title: data.title,
                 description: data.description,
-                icon: data.icon,
+                date: data.date,
                 link: data.link,
                 buttonText: data.buttonText,
+                image: data.image,
             };
         })
-        // order by title alphabetically
-        .sort((a, b) => a.title.localeCompare(b.title));
+        // order by date
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
 }

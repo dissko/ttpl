@@ -26,7 +26,7 @@
 />
 
 <MaxWidthContainer>
-	<main class="bg-base-100 min-h-screen py-8">
+	<main class="bg-base-100 py-8">
 		<div class="container mx-auto">
 			{#each activities as activity, index}
 				<!-- Alternate layout: reverse layout for even-indexed items -->

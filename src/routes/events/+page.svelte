@@ -6,23 +6,17 @@
     // Define an interface for event data
     interface Event {
       title: string;
-      description?: string;
-      image?: string;
+      description: string;
+      date: string,
+      image: string;
       buttonText?: string;
-      buttonLink?: string;
+      link?: string;
     }
+    export let data: {
+        events: Event[];
+    }
+    const { events } = data;
   
-    // Sample array of events – later, this data will come from your CMS.
-    const events: Event[] = [
-      {
-        title: "35th Melrose Craft Sale",
-        description:
-          "Join us for the 35th Melrose Craft Sale on November 1st and 2nd! Visit our Facebook page for more information.",
-        image: "/images/melrose_craft_sale.png",
-        buttonText: "Visit our Facebook Page",
-        buttonLink: "https://www.facebook.com/YOUR_LIBRARY_PAGE"
-      }
-    ];
   </script>
   
   <!-- Reusable Page Header -->
@@ -31,17 +25,18 @@
     subtitle="Check out our upcoming events and special programs." 
     bgClass="bg-primary" />
   
-  <main class="bg-base-100 min-h-screen py-8">
+  <main class="bg-base-100 py-8">
     <MaxWidthContainer>
       {#if events.length > 0}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {#each events as event}
             <FeaturedCard 
               title={event.title}
               description={event.description}
               image={event.image}
               buttonText={event.buttonText}
-              buttonLink={event.buttonLink} />
+              buttonLink={event.link}
+              date={event.date} />
           {/each}
         </div>
       {:else}

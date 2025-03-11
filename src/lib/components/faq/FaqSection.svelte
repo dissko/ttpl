@@ -10,9 +10,9 @@
   }));
 </script>
 
-<section>
+<section class="px-4">
   {#each faqsWithHtml as faq, index}
-    <div class="collapse-arrow bg-base-100 border-base-300 collapse m-4 border">
+    <div class="collapse-arrow bg-base-100 border-base-300 collapse my-4 border">
       <input type="radio" name="faq-accordion" checked={index === 0} />
       <div class="collapse-title font-semibold">{faq.question}</div>
       <div class="collapse-content text-sm">

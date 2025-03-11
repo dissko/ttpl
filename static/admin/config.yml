@@ -62,7 +62,6 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-
     
   - name: "events"
     label: "Events"
@@ -72,9 +71,10 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Button Text", name: "buttonText", widget: "string", required: false }
 
   - name: "faq"
     label: "FAQ"
@@ -135,6 +135,23 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Button Link", name: "link", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
+  
+  - name: "contact"
+    label: "Contact"
+    files:
+      - file: "content/contact/contact.md"
+        label: "Contact Information"
+        name: "contact"
+        fields:
+          - { label: "Street Address", name: "streetAddress", widget: "string" }
+          - { label: "City & Province", name: "cityProvince", widget: "string" }
+          - { label: "Postal Code", name: "postalCode", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Facebook Link", name: "facebook", widget: "string" }
+          - { label: "Instagram Link", name: "instagram", widget: "string" }
+          - { label: "TikTok Link", name: "tiktok", widget: "string" }
+          - { label: "Pinterest Link", name: "pinterest", widget: "string" }
 
 
 

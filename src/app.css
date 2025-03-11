@@ -1,2 +1,9 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+
+
+/* Overrie the default primary color variable (--color-primary) set it to  #013220 */
+:root {
+  --color-primary: #013220;
+  --color-primary-content: oklch(98% 0.002 247.839);
+}

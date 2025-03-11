@@ -28,8 +28,7 @@
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{#each services as service}
 				<div
-					class="card bg-base-100 w-full max-w-sm shadow-md transition-shadow hover:shadow-xl"
-					style="margin: 1rem 0;">
+					class="card bg-base-100 w-full max-w-sm shadow-md transition-shadow hover:shadow-xl mx-auto" >
 					<div class="card-body text-center">
 						<i class="{service.icon} text-primary mb-4 text-4xl"></i>
 						<h2 class="card-title mb-2 text-xl font-semibold">{service.title}</h2>

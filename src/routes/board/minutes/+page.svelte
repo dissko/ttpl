@@ -14,15 +14,16 @@
 </script>
 
 <MaxWidthContainer>
-	<div class="breadcrumbs py-4 text-sm">
+	<div class="breadcrumbs p-4 text-sm">
 		<ul>
 			<li><a href="/board">Library Board</a></li>
 			<li>Meeting Minnutes</li>
 		</ul>
 	</div>
-</MaxWidthContainer>
-<main class="bg-base-100 min-h-screen">
+<main class="bg-base-100 ">
 	<div class="container mx-auto my-4 px-4">
 		<MeetingMinutesList minutes={meetingMinutes} />
 	</div>
 </main>
+
+</MaxWidthContainer>

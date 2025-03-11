@@ -1,32 +1,21 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	import MaxWidthContainer from "$lib/components/MaxWidthContainer.svelte";
 	import HomeHero from "$lib/components/home/HomeHero.svelte";
 	import FeaturedCard from "$lib/components/FeaturedCard.svelte";
 	import FeatureSection from "$lib/components/home/FeatureSection.svelte";
   
-	// Data for the featured cards grid
+	// The load function's return value is available as data in the page store
+	export let data: {
+	  featuredEvents: any[],
+	  featuredActivities: any[]
+	};
+  
+	// Optionally, combine both featured events and activities into one array
 	const featuredCards = [
-	  {
-		image: '/images/melrose_craft_sale.png',
-		title: '35th Melrose Craft Sale',
-		description: 'Join us for the 35th Melrose Craft Sale on November 1st and 2nd! Visit our Facebook page for more information.',
-		buttonText: 'Visit our Facebook Page',
-		buttonLink: 'https://www.facebook.com/YOUR_LIBRARY_PAGE'
-	  },
-	  {
-		image: '/images/after_school_tutoring.png',
-		title: 'After School Tutoring',
-		description: 'Our After School Tutoring program is now open for registration.',
-		buttonText: 'Call to Register',
-		buttonLink: 'tel:1234567890'
-	  },
-	  {
-		image: '/images/melrose_craft_sale.png',
-		title: 'Fun Time Circle',
-		description: 'Join us for our Fun Time Circle program where preschool children learn through interactive art and play.',
-		buttonText: 'Visit our Facebook Page',
-		buttonLink: 'https://www.facebook.com/YOUR_LIBRARY_PAGE'
-	  }
+	  ...data.featuredEvents,
+	  ...data.featuredActivities
 	];
   </script>
   
@@ -49,20 +38,20 @@
 			title={card.title}
 			description={card.description}
 			buttonText={card.buttonText}
-			buttonLink={card.buttonLink} />
+			buttonLink={card.link}
+			date={card.date} />
 		{/each}
 	  </div>
 	</MaxWidthContainer>
   </section>
   
-  <!-- Become a Friend of the Library Section -->
+  <!-- Additional sections remain unchanged -->
   <FeatureSection
 	title="Become a Friend of the Library"
 	description="Support your public library by becoming a Friend of the Library. See the flyer for more details."
 	image="/images/friends_of_the_library.png"
 	direction="bottom" />
   
-  <!-- LEAF Initiative Section -->
   <FeatureSection
 	title="We're a LEAF Initiative Recipient!"
 	description="We are thrilled to announce that we have received the Commonwell L.E.A.F. Grant which will be used towards revitalizing accessibility at Tyendinaga Township Public Library. Check out our press release for more information!"
