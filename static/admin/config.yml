@@ -13,8 +13,9 @@ media_library:
     api_key: 132597831268894
 
 collections:
+  # HOME
   - name: "homepage"
-    label: "Homepage Items"
+    label: "Homepage - Items"
     folder: "content/homepage"
     create: true
     slug: "{{slug}}"
@@ -25,13 +26,15 @@ collections:
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
       - { label: "Button URL", name: "buttonUrl", widget: "string", required: false }
 
-
   - name: "featured"
-    label: "Featured Content"
+    label: "Homepage - Featured Events and Activities"
     folder: "content/featured"
-    create: true
+    create: false
+    delete: false
     slug: "featured"
+    identifier_field: "label"
     fields:
+      - { label: "Label", name: "label", widget: "string", hint: "This does not appear on the website, but is used to identify this item in the CMS." }
       - label: "Featured Events"
         name: "featured_events"
         widget: "relation"
@@ -39,7 +42,6 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         multiple: true
-
       - label: "Featured Activities"
         name: "featured_activities"
         widget: "relation"
@@ -47,10 +49,66 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         multiple: true
-    
 
+  # FAQ
+  - name: "faq"
+    label: "FAQ - Items"
+    folder: "content/faq"
+    create: true
+    slug: "{{fields.question}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "markdown", required: true }
+
+  # LIBRARY BOARD
+  - name: "board"
+    label: "Library Board - Members"
+    folder: "content/board"
+    create: true
+    slug: "{{fields.name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
+
+  - name: "policies"
+    label: "Library Board - Policies"
+    folder: "content/policies"
+    create: true
+    slug: "{{fields.name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "PDF File", name: "pdf", widget: "file" }
+
+  - name: "meetingMinutes"
+    label: "Library Board - Meeting Minutes"
+    folder: "content/meeting-minutes"
+    create: true
+    identifier_field: "date"
+    slug: "{{date}}"
+    preview_path: "{{date}}"
+    fields:
+      - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { label: "PDF File", name: "fileLink", widget: "file" }
+
+  # SERVICES
+  - name: "services"
+    label: "Services - Services"
+    folder: "content/services"
+    create: true
+    identifier_field: "title"
+    slug: "{{title}}"
+    preview_path: "{{title}}"
+    fields:
+      - { label: "Icon Class", name: "icon", widget: "string", hint: "Use a Font Awesome icon class (e.g., 'fa-solid fa-comments')" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Button Link", name: "link", widget: "string", required: false }
+      - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+
+  # ACTIVITIES
   - name: "activities"
-    label: "Activities"
+    label: "Activities Page - Activities"
     folder: "content/activities"
     create: true
     slug: "{{slug}}"
@@ -62,9 +120,10 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-    
+
+  # EVENTS
   - name: "events"
-    label: "Events"
+    label: "Event Page - Events"
     folder: "content/events"
     create: true
     slug: "{{slug}}"
@@ -76,68 +135,33 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
 
-  - name: "faq"
-    label: "FAQ"
-    folder: "content/faq"
-    create: true
-    slug: "{{fields.question}}"
+  # GLOBAL
+  - name: "bannerAlert"
+    label: "Global - Banner Alert"
+    label_singular: "Banner Alert"
+    folder: "content/bannerAlert"
+    create: false
+    delete: false
+    slug: "index"
+    identifier_field: "text"
+    editor:
+      preview: false
     fields:
-      - { label: "Question", name: "question", widget: "string" }
-      - { label: "Answer",  name: 'answer', widget: 'markdown' , required: true }
+      - { label: "Text", name: "text", widget: "text" }
+      - { label: "Start Date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, hint: "Optional. If set, the alert will only show after this date. Otherwise, it will show immediately." }
+      - { label: "End Date", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, hint: "Optional. If set, the alert will only show until this date. Otherwise, it will show indefinitely until updated." }
+      - label: "Color"
+        name: "color"
+        widget: "select"
+        options:
+          - { label: "Info (Blue)", value: "info" }
+          - { label: "Success (Green)", value: "success" }
+          - { label: "Warning (Yellow)", value: "warning" }
+          - { label: "Error (Red)", value: "error" }
+          - { label: "Default (Gray)", value: "default" }
 
-  - name: "board"
-    label: "Board Members"
-    folder: "content/board"
-    create: true
-    slug: "{{fields.name}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Role", name: "role", widget: "string" }
-      - { label: "Order", name: "order", widget: "number" }
-
-  - name: "policies"
-    label: "Library Policies"
-    folder: "content/policies"
-    create: true
-    slug: "{{fields.name}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "PDF File", name: "pdf", widget: "file" }
-
-  - name: "meetingMinutes"
-    label: "Meeting Minutes"
-    folder: "content/meeting-minutes"  # Folder where individual meeting files will be stored
-    create: true                       # Allows adding new meeting minutes via the CMS
-    identifier_field: "date"           # Use the date field as the identifier in the preview card
-    slug: "{{date}}"                   # File name will be the full date (YYYY-MM-DD)
-    preview_path: "{{date}}"   
-    fields:
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-        time_format: false             # Disable time picker since only date is needed
-        date_format: "YYYY-MM-DD"       # Display format: Year-Month-Day (e.g., 2023-04-15)
-        format: "YYYY-MM-DD"            # Stored value is also in the "YYYY-MM-DD" format
-      - label: "PDF File"
-        name: "fileLink"
-        widget: "file"
-
-  - name: "services"
-    label: "Services"
-    folder: "content/services"  # Folder where individual meeting files will be stored
-    create: true                       # Allows adding new meeting minutes via the CMS
-    identifier_field: "title"           # Use the date field as the identifier in the preview card
-    slug: "{{title}}"                   # File name will be the full date (YYYY-MM-DD)
-    preview_path: "{{title}}"   
-    fields:
-      - { Label: "Icon Class", name: "icon", widget: "string", hint: "Use a Font Awesome icon class (e.g., 'fa-solid fa-comments'). Browse: https://fontawesome.com/icons to find an icon." }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Button Link", name: "link", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
-      - { label: "Button Text", name: "buttonText", widget: "string", required: false, hint: "Button Link and Button Text must be set to show the button." }
-  
   - name: "contact"
-    label: "Contact"
+    label: "Global - Contact Information"
     files:
       - file: "content/contact/contact.md"
         label: "Contact Information"
@@ -152,7 +176,3 @@ collections:
           - { label: "Instagram Link", name: "instagram", widget: "string" }
           - { label: "TikTok Link", name: "tiktok", widget: "string" }
           - { label: "Pinterest Link", name: "pinterest", widget: "string" }
-
-
-
-  # Add additional collections (activities, resources, faq, etc.) as needed.

@@ -5,6 +5,7 @@
 	// Import the components
 	import Header from '$lib/components/nav/Header.svelte';
 	import Footer from '$lib/components/nav/Footer.svelte';
+	import Alert from '$lib/components/nav/Alert.svelte';
 
 	let selectedTheme = 'light';
 
@@ -31,14 +32,18 @@
 			tiktok: string;
 			pinterest: string;
 		};
+		bannerAlert: {
+			text: string;
+			color: string;
+			startDate: string | undefined;
+			endDate: string | undefined;
+		}
 	};
 </script>
 
 <!-- Include Navbar and Footer -->
 <div class="flex min-h-screen flex-col">
-	<div role="alert" class="alert alert-primary">
-		<span>👋 Enjoying our new website? We'd love to hear what you think! Let us know your feedback the next time you visit the library.</span>
-	</div>
+	<Alert bannerAlert={data.bannerAlert} />
 	<Header />
 	<main class="flex-grow">
 		<slot />
