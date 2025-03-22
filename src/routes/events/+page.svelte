@@ -1,17 +1,10 @@
 <script lang="ts">
     import PageHeader from '$lib/components/PageHeader.svelte';
     import FeaturedCard from '$lib/components/FeaturedCard.svelte';
-	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
-  
+	  import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
+    import type { Event } from '$lib';
     // Define an interface for event data
-    interface Event {
-      title: string;
-      description: string;
-      date: string,
-      image: string;
-      buttonText?: string;
-      link?: string;
-    }
+
     export let data: {
         events: Event[];
     }

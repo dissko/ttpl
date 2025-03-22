@@ -7,7 +7,7 @@
 <!-- Mobile Navbar -->
 <nav class="navbar bg-base-300 justify-between md:justify-center">
 	<a class="btn btn-ghost text-lg" href="/" style="height:fit-content">
-		<img alt="Logo" src="/images/logo.png" class="w-4" style="height: 100px; width:auto;" />
+		<img alt="Logo" src="/logo.png" class="w-4" style="height: 100px; width:auto;" />
 	</a>
 
 	<div class="dropdown dropdown-end md:hidden">
