@@ -7,19 +7,23 @@
 	import Footer from '$lib/components/nav/Footer.svelte';
 	import Alert from '$lib/components/nav/Alert.svelte';
 
-	let selectedTheme = 'light';
+	import posthog from 'posthog-js'
+	import { browser } from '$app/environment';
 
-	// function changeTheme(theme: string) {
-	// 	selectedTheme = theme;
-	// 	document.documentElement.setAttribute('data-theme', theme);
-	// 	localStorage.setItem('theme', theme);
-	// }
-
-	// onMount(() => {
-	// 	const storedTheme = localStorage.getItem('theme') || 'light';
-	// 	selectedTheme = storedTheme;
-	// 	document.documentElement.setAttribute('data-theme', storedTheme);
-	// });
+	onMount(() => {
+	console.log('onMount')
+	if (browser) {
+		console.log('Posthog initialized')
+		posthog.init(
+		'phc_SeMF7KaxKen08S8dnq7zS0S18tWKGCLVHU0dmcCKl1M',
+		{ 
+			api_host: 'https://us.i.posthog.com',
+			person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+		}
+		)
+	}
+	return
+	});
 	export let data: {
 		contact: {
 			streetAddress: string;
