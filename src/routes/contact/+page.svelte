@@ -2,7 +2,7 @@
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import ContactInfo from '$lib/components/contact/ContactInfo.svelte';
-
+	import SvelteSeo from 'svelte-seo';
 	// The contact data loaded from the server is available as `data.contact`
 	export let data: {
 		contact: {
@@ -19,11 +19,14 @@
 	};
 </script>
 
-<!-- Page Header -->
-<PageHeader
-	title="Contact Us"
-	subtitle="Get in touch or visit us at our library location."
+<SvelteSeo
+	title="Contact Us - Tyendinaga Township Public Library"
+	description="Get in touch or visit us at our library location."
+	canonical="https://ttpl.ca/contact"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"
 />
+<!-- Page Header -->
+<PageHeader title="Contact Us" subtitle="Get in touch or visit us at our library location." />
 
 <main class="bg-base-100 p-8">
 	<MaxWidthContainer>

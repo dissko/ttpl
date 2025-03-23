@@ -3,6 +3,7 @@
     import FeaturedCard from '$lib/components/FeaturedCard.svelte';
 	  import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
     import type { Event } from '$lib';
+    import SvelteSeo from 'svelte-seo';
     // Define an interface for event data
 
     export let data: {
@@ -12,6 +13,11 @@
   
   </script>
   
+  <SvelteSeo
+    title="Library Events - Tyendinaga Township Public Library"
+    description="Check out our upcoming events and special programs."
+    canonical="https://ttpl.ca/events"
+    keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources" />
   <!-- Reusable Page Header -->
   <PageHeader 
     title="Library Events" 

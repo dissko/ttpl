@@ -6,6 +6,8 @@
 	import FeaturedCard from '$lib/components/FeaturedCard.svelte';
 	import FeatureSection from '$lib/components/home/FeatureSection.svelte';
 	import type { HomepageItem } from '$lib';
+	import SvelteSeo from "svelte-seo";
+
 	// The load function's return value is available as data in the page store
 	export let data: {
 		featuredEvents: any[];
@@ -16,7 +18,11 @@
 	// Optionally, combine both featured events and activities into one array
 	const featuredCards = [...data.featuredEvents, ...data.featuredActivities];
 </script>
-
+<SvelteSeo
+	title="Tyendinaga Township Public Library"
+	description="Your hub for books, events, and community resources. Follow us on Facebook for the latest updates!"
+	canonical="https://ttpl.ca/"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"/>
 <!-- Top Hero Section -->
 <HomeHero
 	image="/hero.jpg"

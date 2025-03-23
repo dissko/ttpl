@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
-
+	import SvelteSeo from 'svelte-seo';
   export let data: {
     services: {
       title: string;
@@ -14,7 +14,11 @@
 
   const { services } = data;
 </script>
-
+<SvelteSeo
+	title="Library Services - Tyendinaga Township Public Library"
+	description="Discover the wide range of services we offer at the library."
+	canonical="https://ttpl.ca/services"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"/>
 <!-- Page Header -->
 <PageHeader
 	title="Library Services"

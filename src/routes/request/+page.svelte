@@ -1,10 +1,15 @@
 <script>
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
-	import PageHeader from '$lib/components/PageHeader.svelte';
-
+	import SvelteSeo from 'svelte-seo';
 	// No header and footer for now
 </script>
 
+<SvelteSeo
+	title="Request a Book - Tyendinaga Township Public Library"
+	description="Request your favorite book to be added to our library collection."
+	canonical="https://ttpl.ca/request"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"
+/>
 <!-- Hero Section -->
 <div class="hero bg-base-200 py-8">
 	<div class="hero-content flex-col gap-8 lg:flex-row">

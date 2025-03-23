@@ -3,7 +3,7 @@
 	import BoardMembers from '$lib/components/board/BoardMembers.svelte';
 	import LibraryPolicies from '$lib/components/board/LibraryPolicies.svelte';
 	import MeetingMinutes from '$lib/components/board/MeetingMinutes.svelte';
-
+	import SvelteSeo from 'svelte-seo';
 	export let data: {
 		boardMembers: {
 			name: string;
@@ -14,14 +14,21 @@
 			name: string;
 			pdf: string;
 		}[];
-    meetingMinutes: {
-      date: string;
-      fileLink: string;
-    }[];
+		meetingMinutes: {
+			date: string;
+			fileLink: string;
+		}[];
 	};
 
 	const { boardMembers, policies, meetingMinutes } = data;
 </script>
+
+<SvelteSeo
+	title="Library Board - Tyendinaga Township Public Library"
+	description="Meet our board members, view our policies, and access meeting minutes."
+	canonical="https://ttpl.ca/board"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"
+/>
 
 <PageHeader
 	title="Library Board"

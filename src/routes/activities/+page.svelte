@@ -2,7 +2,7 @@
 	import MaxWidthContainer from '$lib/components/MaxWidthContainer.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import ActivityItem from '$lib/components/activities/ActivityItem.svelte';
-
+	import SvelteSeo from 'svelte-seo';
 	// Types
 	export let data: {
 		activities: {
@@ -18,6 +18,12 @@
 	const { activities } = data;
 </script>
 
+<SvelteSeo
+	title="Library Activities - Tyendinaga Township Public Library"
+	description="Explore our dynamic range of programs and activities. Watch this space for for new offerings and updates!"
+	canonical="https://ttpl.ca/activities"
+	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"
+/>
 <!-- Page Header -->
 <PageHeader
 	title="Library Activities"
