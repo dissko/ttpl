@@ -148,6 +148,18 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false }
 
+  # Resources
+  - name: "resources"
+    label: "Resources Page - Resources"
+    folder: "content/resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Link", name: "link", widget: "string"}
+      - { label: "Image", name: "image", widget: "image" }
+
   # GLOBAL
   - name: "bannerAlert"
     label: "Global - Banner Alert"
