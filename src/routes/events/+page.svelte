@@ -15,8 +15,7 @@
   <!-- Reusable Page Header -->
   <PageHeader 
     title="Library Events" 
-    subtitle="Check out our upcoming events and special programs." 
-    bgClass="bg-primary" />
+    subtitle="Check out our upcoming events and special programs."  />
   
   <main class="bg-base-100 py-8">
     <MaxWidthContainer>

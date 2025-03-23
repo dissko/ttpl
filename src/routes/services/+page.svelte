@@ -19,7 +19,6 @@
 <PageHeader
 	title="Library Services"
 	subtitle="Discover the wide range of services we offer at the library."
-	bgClass="bg-primary"
 />
 
 <main class="bg-base-100 py-8">

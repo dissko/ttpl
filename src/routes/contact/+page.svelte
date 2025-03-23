@@ -23,7 +23,6 @@
 <PageHeader
 	title="Contact Us"
 	subtitle="Get in touch or visit us at our library location."
-	bgClass="bg-primary"
 />
 
 <main class="bg-base-100 p-8">

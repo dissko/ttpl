@@ -22,7 +22,6 @@
 <PageHeader
 	title="Library Activities"
 	subtitle="Explore our dynamic range of programs and activities. Watch this space for for new offerings and updates!"
-	bgClass="bg-primary"
 />
 
 <MaxWidthContainer>

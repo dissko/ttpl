@@ -4,7 +4,7 @@
   </script>
   <main class="bg-base-100">
     <!-- Hero Section -->
-     <PageHeader title="Calendar" subtitle="Stay up to date with our events and programs." bgClass="bg-primary" />
+     <PageHeader title="Calendar" subtitle="Stay up to date with our events and programs." />
   
     <!-- Calendar Embed -->
     <section class="py-10 px-4">

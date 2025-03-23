@@ -153,8 +153,7 @@
   <!-- Page Header -->
   <PageHeader 
     title="Resources and Reference Links" 
-    subtitle="Access our comprehensive electronic resources and reference tools." 
-    bgClass="bg-primary" />
+    subtitle="Access our comprehensive electronic resources and reference tools." />
   
   <main class="bg-base-100 py-8">
     <div class="container mx-auto px-4">

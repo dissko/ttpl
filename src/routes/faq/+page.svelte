@@ -15,7 +15,7 @@
 
 <main class="bg-base-100">
 	<!-- Hero Section -->
-     <PageHeader title="FAQ" subtitle="Find answers to your most common questions." bgClass="bg-primary" />
+     <PageHeader title="FAQ" subtitle="Find answers to your most common questions." />
 
 	<MaxWidthContainer>
 		<FaqSection {faqs} />
