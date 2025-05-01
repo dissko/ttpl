@@ -1,6 +1,6 @@
 ---
-text: 👋 Enjoying our new website? We'd love to hear what you think! Let us know
-  your feedback the next time you visit the library.
-endDate: 2025-05-31
+text: 🚫 Due to unexpected circumstances, the library will be closed Saturday,
+  May 3rd.
+endDate: 2025-05-04
 color: info
 ---
