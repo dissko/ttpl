@@ -6,11 +6,11 @@ description: >-
   Executive Officer (CEO)/Head Librarian. This role is responsible for the
   administration, organization, planning, and general supervision of all library
   operations and services.
-
-
+  <br/>
+  <br/>
   **Application Closing Date: Thursday, May 22, 2025.**
-
-
+  <br/>
+  <br/>
   Click below for the full job description and application details.
 image: https://res.cloudinary.com/dk3keqspt/image/upload/v1746717008/TyendinagaLogoSmall_jiyjeb.png
 buttonText: View CEO Job Description & Apply

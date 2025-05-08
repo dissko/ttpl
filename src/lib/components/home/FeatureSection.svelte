@@ -1,5 +1,6 @@
 <!-- src/lib/components/FeatureSection.svelte -->
 <script lang="ts">
+	import { marked } from 'marked';
 	export let title: string;
 	export let description: string;
 	export let image: string;
@@ -19,6 +20,8 @@
 		}
 		return '_self';
 	};
+
+	$: parsedDescription = marked(description);
 </script>
 
 <section class="hero py-4 {bgColor}">
@@ -28,7 +31,7 @@
 				<img src={image} alt={title} class="mb-4 w-full max-w-sm rounded-lg" />
 				<div class="max-w-md text-center">
 					<h1 class="text-3xl font-semibold">{title}</h1>
-					<p class="py-4">{description}</p>
+					<p class="py-4">{@html parsedDescription}</p>
 					{#if ctaText && ctaLink}
 						<a href={ctaLink} target="{setTarget()}" class="btn btn-primary">{ctaText}</a>
 					{/if}
@@ -38,7 +41,7 @@
 			<div class="flex flex-col items-center">
 				<div class="max-w-md text-center">
 					<h1 class="text-3xl font-semibold">{title}</h1>
-					<p class="py-4">{description}</p>
+					<p class="py-4">{@html parsedDescription}</p>
 					{#if ctaText && ctaLink}
 						<a href={ctaLink} target="{setTarget()}" class="btn btn-primary">{ctaText}</a>
 					{/if}
@@ -50,7 +53,7 @@
 				<img src={image} alt={title} class="w-full max-w-sm rounded-lg" />
 				<div class="max-w-md">
 					<h1 class="text-3xl font-semibold">{title}</h1>
-					<p class="py-4">{description}</p>
+					<p class="py-4">{@html parsedDescription}</p>
 					{#if ctaText && ctaLink}
 						<a href={ctaLink} target="{setTarget()}" class="btn btn-primary">{ctaText}</a>
 					{/if}
@@ -60,7 +63,7 @@
 			<div class="flex flex-col items-center lg:flex-row gap-8">
 				<div class="max-w-md">
 					<h1 class="text-3xl font-semibold">{title}</h1>
-					<p class="py-4">{description}</p>
+					<p class="py-4">{@html parsedDescription}</p>
 					{#if ctaText && ctaLink}
 						<a href={ctaLink} target="{setTarget()}" class="btn btn-primary">{ctaText}</a>
 					{/if}
