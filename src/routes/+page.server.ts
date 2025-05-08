@@ -89,10 +89,11 @@ async function loadHomepageItems(): Promise<HomepageItem[]> {
     console.error('No homepage items found');
     return [];
   }
-  return homepageItemsFiles.map((filename) => {
+  const homepageItems = homepageItemsFiles.map((filename) => {
     const filePath = path.join(homepageItemsDir, filename);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { data } = matter(fileContent);
     return data as HomepageItem;
   });
+  return homepageItems.sort((a, b) => a.order - b.order);
 }

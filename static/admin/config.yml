@@ -23,12 +23,10 @@ collections:
     fields:
       - { label: "Order On Homepage", name: "order", widget: "number", required: true, hint: "This will determine the order in which items appear on the homepage." }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "markdown", required: true, hint: "Supports rich text formatting, including bolding, new lines, and hyperlinks." }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Button Text", name: "buttonText", widget: "string", required: false, hint: "Optional. If not set and a link is set, the button text will default to 'Learn More'" }
       - { label: "Button URL", name: "buttonUrl", widget: "string", required: false }
-      # Create a select option for image orientation: top, left, right, bottom
-      # Explan to the user that this will determine the layout of the image relative to the text
       - label: "Image Orientation"
         name: "imageOrientation"
         widget: "select"
