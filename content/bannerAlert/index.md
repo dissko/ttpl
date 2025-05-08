@@ -1,6 +1,6 @@
 ---
-text: 🚫 Due to unexpected circumstances, the library will be closed Saturday,
-  May 3rd.
-endDate: 2025-05-04
+text: "Now hiring: CEO/Head Librarian & Assistant Librarian. Application
+  deadline May 22, 2025. See homepage for details."
+endDate: 2025-05-23
 color: info
 ---
