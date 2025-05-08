@@ -7,7 +7,7 @@
     const title = `Board Meeting - ${new Date(date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
 
     // display Date should be DayOfWeek MMMM DD, YYYY
-    const displayDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    const displayDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
   </script>
   
   <div class="card bg-base-100 shadow-md">
