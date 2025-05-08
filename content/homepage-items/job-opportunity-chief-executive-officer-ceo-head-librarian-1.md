@@ -2,6 +2,7 @@
 order: 1
 title: "Job Opportunity: Chief Executive Officer (CEO)/Head Librarian"
 description: >-
+  <div id="job-opportunity" style="position: absolute; margin-top: -150px"></div>
   The Tyendinaga Township Public Library (TTPL) Board is seeking a Chief
   Executive Officer (CEO)/Head Librarian. This role is responsible for the
   administration, organization, planning, and general supervision of all library
