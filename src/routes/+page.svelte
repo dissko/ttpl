@@ -29,7 +29,7 @@
 	title="Welcome to the Tyendinaga Township Public Library"
 	description="Your hub for books, events, and community resources. Follow us on Facebook for the latest updates!"
 	ctaText="Visit Our Facebook Page"
-	ctaLink="https://www.facebook.com/YOUR_LIBRARY_PAGE"
+	ctaLink="https://www.facebook.com/tyendinagatownshippubliclibrary/"
 />
 
 <!-- Featured Events and Activities -->
