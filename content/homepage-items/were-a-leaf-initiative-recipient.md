@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 10
 title: We're a LEAF Initiative Recipient!
 description: We are thrilled to announce that we have received the Commonwell
   L.E.A.F. Grant which will be used towards revitalizing accessibility at
