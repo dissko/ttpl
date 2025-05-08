@@ -32,6 +32,12 @@
     <p>Sat: 10am - 4pm</p>
     <p>Sun: Closed</p>
     <p><i>Closed Saturdays of long weekends</i></p>
+    <br/>
+    <p>
+      For up-to-date hours, please check our
+      <a href="https://www.facebook.com/tyendinagatownshippubliclibrary/" target="_blank" class="hover:underline">
+        Facebook page
+      </a>.
   </div>
 
   <!-- Contact Info -->
