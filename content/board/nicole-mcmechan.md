@@ -1,5 +1,5 @@
 ---
 name: Nicole McMechan
-role: Board Member
-order: 2
+role: Board Chair
+order: 1
 ---
