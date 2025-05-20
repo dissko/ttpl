@@ -90,7 +90,18 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "PDF File", name: "pdf", widget: "file" }
-
+      
+  - name: "meetingAgendas"
+    label: "Library Board - Meeting Agendas"
+    folder: "content/meeting-agendas"
+    create: true
+    identifier_field: "date"
+    slug: "{{date}}"
+    preview_path: "{{date}}"
+    fields:
+      - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { label: "PDF File", name: "fileLink", widget: "file" }
+      
   - name: "meetingMinutes"
     label: "Library Board - Meeting Minutes"
     folder: "content/meeting-minutes"
@@ -101,6 +112,7 @@ collections:
     fields:
       - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - { label: "PDF File", name: "fileLink", widget: "file" }
+
 
   # SERVICES
   - name: "services"

@@ -7,8 +7,9 @@ export async function load() {
     const boardMembers = await loadBoardMembers();
     const policies = await loadPolicies();
     const meetingMinutes = await loadMeetingMinutes();
+    const meetingAgendas = await loadMeetingAgendas();
 
-    return { boardMembers: boardMembers, policies: policies, meetingMinutes: meetingMinutes };
+    return { boardMembers: boardMembers, policies: policies, meetingMinutes: meetingMinutes, meetingAgendas: meetingAgendas };
 }
 
 async function loadBoardMembers() {
@@ -84,6 +85,34 @@ async function loadMeetingMinutes(){
     return files
         .map((filename) => {
             const filePath = path.join(meetingMinutesDir, filename);
+            const fileContent = fs.readFileSync(filePath, 'utf-8');
+            const { data } = matter(fileContent);
+
+            return {
+                date: data.date,
+                fileLink: data.fileLink,
+            };
+        })
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+}
+
+async function loadMeetingAgendas(){
+    const meetingAgendasDir = path.resolve('content/meeting-agendas');
+    // if the directory doesn't exist, return an empty array
+    if (!fs.existsSync(meetingAgendasDir)) {
+        console.error('No Meeting Agendas directory found');
+        return [];
+    }
+    const files = fs.readdirSync(meetingAgendasDir);
+
+    // if files is empty, return an empty array
+    if (!files.length) {
+        return [];
+    }
+    return files
+        .map((filename) => {
+            const filePath = path.join(meetingAgendasDir, filename);
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const { data } = matter(fileContent);
 
