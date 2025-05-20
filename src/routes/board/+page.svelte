@@ -38,6 +38,7 @@
 <PageHeader
 	title="Library Board"
 	subtitle="Meet our board members, view our policies, and access meeting minutes."
+	contact="ttpllibraryboard@gmail.com"
 />
 
 <main class="bg-base-100">
