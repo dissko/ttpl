@@ -6,4 +6,6 @@ featured_events:
 featured_activities:
   - After School Tutoring - Fall 2025
   - 1000 Books Before Kindergarten
+  - Music and Motion
+  - Fun Time Circle
 ---
