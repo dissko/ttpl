@@ -1,8 +1,8 @@
 ---
 label: Home Page Featured Events and Activities
 featured_events:
-  - Paint "Night" with SERNA
   - Book Club
+  - Holiday Craft Day
 featured_activities:
   - After School Tutoring - Fall 2025
   - Fun Time Circle
