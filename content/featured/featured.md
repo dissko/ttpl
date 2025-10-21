@@ -5,7 +5,5 @@ featured_events:
   - Holiday Craft Day
 featured_activities:
   - After School Tutoring - Fall 2025
-  - Fun Time Circle
-  - Music and Motion
   - 1000 Books Before Kindergarten
 ---
