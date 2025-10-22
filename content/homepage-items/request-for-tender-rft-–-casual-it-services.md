@@ -6,9 +6,7 @@ description: >-
   working with Tyendinaga Township Public Library? 
 
 
-
-
-  Please visit [the link ](https://docs.google.com/document/d/12dLMIZg45vTxYYuC7CcjKM_7_Hy7HzVX1kqsMUeEzxc/edit?usp=sharing)for more details.
+  Please visit[**this link** ](https://docs.google.com/document/d/12dLMIZg45vTxYYuC7CcjKM_7_Hy7HzVX1kqsMUeEzxc/edit?usp=sharing)for more details.
 image: https://res.cloudinary.com/dk3keqspt/image/upload/v1746717008/TyendinagaLogoSmall_jiyjeb.png
 imageOrientation: top
 ---
