@@ -49,10 +49,7 @@
 				/>
 			{/each}
 		</div>
-		\\<div>
-  			\\<h1>Welcome to the Traffic Counter App!</h1>
-  			\\<TrafficCounter />
-		\\</div>
+
 	</MaxWidthContainer>
 </section>
 
