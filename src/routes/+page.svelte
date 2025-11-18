@@ -7,6 +7,7 @@
 	import FeatureSection from '$lib/components/home/FeatureSection.svelte';
 	import type { HomepageItem } from '$lib';
 	import SvelteSeo from "svelte-seo";
+	import TrafficCounter from '$lib/TrafficCounter.svelte';
 
 	// The load function's return value is available as data in the page store
 	export let data: {
@@ -50,7 +51,10 @@
 		</div>
 	</MaxWidthContainer>
 </section>
-
+<div>
+  <h1>Welcome to the Traffic Counter App!</h1>
+  <TrafficCounter />
+</div>
 {#each data.homepageItems as homePageItem, index}
 	<FeatureSection
 		title={homePageItem.title}
