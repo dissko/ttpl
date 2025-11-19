@@ -49,9 +49,6 @@
 				/>
 			{/each}
 		</div>
-		<div>
-			<TrafficCounter />
-		</div>
 	</MaxWidthContainer>
 </section>
 
