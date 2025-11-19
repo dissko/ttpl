@@ -1,19 +1,28 @@
 <script>
+  import { onMount } from 'svelte';
   let count = 0;
 
-  const increment = () => {
-    count += 1;
-  };
+  onMount(async () => {
+    const response = await fetch('/api/traffic');
+    const data = await response.json();
+    count = data.count;
+  });
 
-  const reset = () => {
-    count = 0;
-  };
+  async function increment() {
+    count++;
+    await fetch('/api/traffic', {
+      method: 'POST',
+      body: JSON.stringify({ count }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 </script>
 
 <div class="traffic-counter">
   <h1>Traffic Count: {count}</h1>
-  <button on:click={increment}>Add Visitor</button>
-  <button on:click={reset}>Reset Count</button>
+  <button on:click={increment}>Increment</button>
 </div>
 
 <style>
@@ -22,9 +31,5 @@
     padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 8px;
-  }
-  button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
   }
 </style>
