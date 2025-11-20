@@ -1,15 +1,16 @@
 <script lang="ts">
-  export let contact: {
-    streetAddress: string;
-    cityProvince: string;
-    postalCode: string;
-    email: string;
-    phone: string;
-    facebook: string;
-    instagram: string;
-    tiktok: string;
-    pinterest: string;
-  };
+  	import TrafficCounter from '$lib/TrafficCounter.svelte';
+    export let contact: {
+      streetAddress: string;
+      cityProvince: string;
+      postalCode: string;
+      email: string;
+      phone: string;
+      facebook: string;
+      instagram: string;
+      tiktok: string;
+      pinterest: string;
+    };
 </script>
 
 <footer class="footer md:footer-horizontal bg-neutral text-neutral-content px-10 pt-10 pb-4">
