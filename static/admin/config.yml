@@ -211,6 +211,7 @@ collections:
           - { label: "Instagram Link", name: "instagram", widget: "string" }
           - { label: "TikTok Link", name: "tiktok", widget: "string" }
           - { label: "Pinterest Link", name: "pinterest", widget: "string" }
+          
  - name: "traffic"
    label: "Traffic Counter"
    folder: "src/traffic"
