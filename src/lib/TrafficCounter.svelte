@@ -3,14 +3,14 @@
   let count = 0;
 
   onMount(async () => {
-    const response = await fetch('/api/traffic');
+    const response = await fetch('/src/traffic');
     const data = await response.json();
     count = data.count;
   });
 
   async function increment() {
     count++;
-    await fetch('/api/traffic', {
+    await fetch('/scr/traffic', {
       method: 'POST',
       body: JSON.stringify({ count }),
       headers: {
