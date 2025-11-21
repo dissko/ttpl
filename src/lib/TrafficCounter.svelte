@@ -2,14 +2,13 @@
   import { onMount } from 'svelte';
   let count = 0;
   let error = 'N'
-  let repo = 'a'
+  let repo = import.meta.env.VITE_GIT_REPO_OWNER
 
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
     const repoName = import.meta.env.VITE_GIT_REPO_NAME;
     const filePath = import.meta.env.VITE_GIT_FILE_PATH;
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
-    repo = repoOwner
     const response = await fetch(
         'https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}',
         {
