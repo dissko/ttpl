@@ -3,6 +3,10 @@
   let count = 0;
 
   onMount(async () => {
+    const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
+    const repoName = import.meta.env.VITE_GIT_REPO_NAME;
+    const filePath = import.meta.env.VITE_GIT_FILE_PATH;
+    const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     const response = await fetch('/src/traffic/map-count-0.md');
     const data = await response.json();
     count = data.count;
