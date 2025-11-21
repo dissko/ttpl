@@ -40,7 +40,7 @@
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{data}</h1>
+  <h1>Traffic Count: {count}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
