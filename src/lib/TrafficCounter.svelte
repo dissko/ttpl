@@ -10,7 +10,7 @@
     const filePath = import.meta.env.VITE_GIT_FILE_PATH;
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     const response = await fetch(
-        '/src/traffic/',
+        '/src/traffic/map-count-0.md',
         {
             headers: {
                 'Content-Type': 'application/json',
