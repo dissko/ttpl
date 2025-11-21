@@ -3,7 +3,11 @@
   let count = 0;
   let error = 'N'
   let repo = 'R'
-
+export async function load({ fetch }) {
+    const response = await fetch("https://api.github.com/users/nicksalt/repos");
+    const repos = await response.json();
+    repo = repos
+}
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
     const repoName = import.meta.env.VITE_GIT_REPO_NAME;
