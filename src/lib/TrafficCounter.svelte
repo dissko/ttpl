@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   let count = 0;
+  let error = 'N'
 
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
@@ -22,6 +23,7 @@
         const data = await response.json();
     } else {
         console.error('Failed to fetch json:', response.status);
+        error = 'F'
     }
     count = data.count;
   });
@@ -45,7 +47,7 @@
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}</h1>
+  <h1>Traffic Count: {count}{error}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
