@@ -17,7 +17,12 @@
             },
         }
         );
-    const data = await response.json();
+    
+    if (response.ok) {
+        const data = await response.json();
+    } else {
+        console.error('Failed to fetch json:', response.status);
+    }
     count = data.count;
   });
 
