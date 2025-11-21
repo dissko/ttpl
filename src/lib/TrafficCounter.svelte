@@ -29,7 +29,7 @@
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     await fetch('https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}', {
       method: 'POST',
-      body: JSON.stringify({ count }),
+      body: JSON.stringify({count}),
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/vnd.github.v3.raw',
@@ -40,7 +40,7 @@
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}</h1>
+  <h1>Traffic Count: {count}{data}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
