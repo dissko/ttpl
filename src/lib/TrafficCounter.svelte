@@ -13,7 +13,6 @@
         {
             headers: {
                 'Content-Type': 'application/json',
-                Accept: 'application/vnd.github.v3.raw',
                 Authorization: `Bearer ${accessToken}`,
             },
         }
@@ -39,7 +38,6 @@
       body: JSON.stringify({count}),
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/vnd.github.v3.raw',
         Authorization: `Bearer ${accessToken}`,
       },
     });
