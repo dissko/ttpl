@@ -10,7 +10,7 @@
     const filePath = import.meta.env.VITE_GIT_FILE_PATH;
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     const response = await fetch(
-        'https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}',
+        '/src/traffic/',
         {
             headers: {
                 'Content-Type': 'application/json',
