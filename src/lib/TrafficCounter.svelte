@@ -14,7 +14,7 @@
 
   async function increment() {
     count++;
-    await fetch('/scr/traffic/map-count-0.md', {
+    await fetch('https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}', {
       method: 'POST',
       body: JSON.stringify({ count }),
       headers: {
