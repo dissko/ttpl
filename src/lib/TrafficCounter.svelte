@@ -7,14 +7,14 @@
     const repoName = import.meta.env.VITE_GIT_REPO_NAME;
     const filePath = import.meta.env.VITE_GIT_FILE_PATH;
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
-    const response = await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic');
+    const response = await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md');
     const data = await response.json();
     count = data.count;
   });
 
   async function increment() {
     count++;
-    await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic', {
+    await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
       method: 'POST',
       body: JSON.stringify({ count }),
       headers: {
