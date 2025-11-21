@@ -3,11 +3,20 @@
   let count = 0;
   let error = 'N'
   let repo = 'R'
+  let content = 'P';
+
 export async function load({ fetch }) {
     const response = await fetch("https://api.github.com/users/nicksalt/repos");
     const repos = await response.json();
     repo = {repos}
 }
+
+  onMount(async () => {
+    const response = await fetch('/posts/example.md');
+    content = await response.text();
+  });
+
+
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
     const repoName = import.meta.env.VITE_GIT_REPO_NAME;
@@ -50,7 +59,7 @@ export async function load({ fetch }) {
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{error}{repo}</h1>
+  <h1>Traffic Count: {count}{error}{repo}{@html content}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
