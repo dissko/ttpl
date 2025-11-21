@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   let count = 0;
   let error = 'N'
-  let repo = import.meta.env.VITE_GIT_REPO_OWNER
+  let repo = 'R'
 
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
