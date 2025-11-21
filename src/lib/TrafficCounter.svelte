@@ -59,7 +59,7 @@ export async function load({ fetch }) {
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{error}{repo}{@html content}</h1>
+  <h1>Traffic Count: {count}{error}{repo}{content}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
