@@ -13,7 +13,7 @@ export async function load({ fetch }) {
 
     } else {
         console.error('Failed to fetch repos:', response.status);
-        error = 'F'
+        repo= 'F'
     }
 }
 
