@@ -7,8 +7,14 @@
 
 export async function load({ fetch }) {
     const response = await fetch("https://api.github.com/users/nicksalt/repos");
-    const repos = await response.json();
-    repo = {repos}
+    if (response.ok) {
+        const repos = await response.json();
+    	  repo = {repos}
+
+    } else {
+        console.error('Failed to fetch repos:', response.status);
+        error = 'F'
+    }
 }
 
   onMount(async () => {
