@@ -23,11 +23,11 @@ export async function load({ fetch }) {
     const filePath = import.meta.env.VITE_GIT_FILE_PATH;
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     const response = await fetch(
-        'https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}',
+        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md',
         {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${accessToken}`,
+                Authorization: `Bearer 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`,
             },
         }
         );
