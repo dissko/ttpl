@@ -34,11 +34,12 @@ export async function load({ fetch }) {
     
     if (response.ok) {
         const data = await response.json();
+        count = data.count;
+
     } else {
         console.error('Failed to fetch json:', response.status);
         error = 'F'
     }
-    count = data.count;
   });
 
   async function increment() {
