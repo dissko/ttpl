@@ -5,19 +5,6 @@
   let repo = 'R'
   let content = 'P';
 
-export async function load({ fetch }) {
-    const response = await fetch("https://api.github.com/users/nicksalt/repos");
-    if (response.ok) {
-        const repos = await response.json();
-    	  repo = {repos}
-
-    } else {
-        console.error('Failed to fetch repos:', response.status);
-        repo= 'F'
-    }
-}
-
-
 
   onMount(async () => {
     const repoOwner = import.meta.env.VITE_GIT_REPO_OWNER;
