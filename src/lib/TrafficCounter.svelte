@@ -17,10 +17,6 @@ export async function load({ fetch }) {
     }
 }
 
-  onMount(async () => {
-    const response = await fetch('/src/traffice/map-count-0.md');
-    content = await response.text();
-  });
 
 
   onMount(async () => {
