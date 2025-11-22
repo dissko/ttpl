@@ -216,5 +216,6 @@ collections:
     label: "Traffic Counter"
     folder: "src/traffic"
     create: true
+    identifier_field: "count"
     fields:
       - { label: "Count", name: "count", widget: "number" }
