@@ -24,7 +24,7 @@
     if (response.ok) {
         const data = await response.json();
         content = atob(data.content);
-        count = parseInt(data.content);
+        count = content.count;
         console.log(data);
 
     } else {
