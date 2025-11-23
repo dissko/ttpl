@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  let count = 'o';
+  let count = 0;
   let error = 'N'
   let repo = 'R'
   let content = 'C';
@@ -24,7 +24,7 @@
     if (response.ok) {
         const data = await response.json();
         content = data;
-        count = data.count;
+        count = parseInt(data.count);
 
     } else {
         console.error('Failed to fetch json:', response.status);
