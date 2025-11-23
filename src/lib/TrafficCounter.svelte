@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  let count = 'o'';
+  let count = 'o';
   let error = 'N'
   let repo = 'R'
   let content = 'C';
