@@ -22,7 +22,7 @@
         );
     
     if (response.ok) {
-        const data = await response.text();
+        const data = await response.json();
         count = data;
 
     } else {
