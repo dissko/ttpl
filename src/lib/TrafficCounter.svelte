@@ -25,6 +25,7 @@
         const data = await response.json();
         content = typeof data;
         count = parseInt(data.count);
+        console.log(data);
 
     } else {
         console.error('Failed to fetch json:', response.status);
