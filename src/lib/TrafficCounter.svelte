@@ -23,7 +23,7 @@
     
     if (response.ok) {
         const data = await response.text();
-        count = data.count;
+        count = data;
 
     } else {
         console.error('Failed to fetch json:', response.status);
