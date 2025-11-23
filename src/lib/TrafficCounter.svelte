@@ -3,7 +3,7 @@
   let count = 0;
   let error = 'N'
   let repo = 'R'
-  let content = 'P';
+  let content = 'C';
 
 
   onMount(async () => {
