@@ -4,6 +4,7 @@
   let error = 'N'
   let repo = 'R'
   let content = 'C';
+  let addend = 0
 
 
   onMount(async () => {
@@ -24,7 +25,8 @@
     if (response.ok) {
         const data = await response.json();
         content = atob(data.content);
-        repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +3 +(content.split(' ').filter(word => !isNaN(word)).length;));
+        addend = content.split(' ').filter(word => !isNaN(word)).length;
+        repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +3);
         count = parseInt(repo)
         console.log(data);
 
