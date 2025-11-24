@@ -54,7 +54,7 @@
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{error}{repo}{content}</h1>
+  <h1>Traffic Count: {count}{error}{repo}{content}{addend}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
