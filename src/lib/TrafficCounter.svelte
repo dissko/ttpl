@@ -55,7 +55,9 @@
             },
     });
     if (responseagain.ok) {
+        const dataagain = await responseagain.json();
         again = "N";
+        console.log(dataagain);
 
     } else {
         console.error('Failed to save json:', response.status);
