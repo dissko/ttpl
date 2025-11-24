@@ -72,7 +72,7 @@
     
     
     
-  }
+
 </script>
 
 <div class="traffic-counter">
