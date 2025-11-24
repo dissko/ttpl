@@ -28,7 +28,7 @@
         sha = data.sha;
         resave = content
         content = content.replace(/(\r\n|\n|\r)/g, " ");
-        addend = content.split(' ').filter(word => !isNaN(word)).length +2;
+        addend = content.split(' ').filter(word => !isNaN(word)).length +3;
         repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +addend);
         count = parseInt(repo)
         count++;
