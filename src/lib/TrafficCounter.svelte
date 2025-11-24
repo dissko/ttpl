@@ -4,7 +4,7 @@
   let error = 'N'
   let repo = 'R'
   let content = 'C';
-  let addend = 0
+  let addend = 0;
 
 
   onMount(async () => {
