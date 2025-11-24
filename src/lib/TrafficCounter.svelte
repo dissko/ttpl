@@ -5,6 +5,7 @@
   let repo = 'R'
   let content = 'C';
   let addend = 0;
+  let resave = 'S';
 
 
   onMount(async () => {
@@ -25,10 +26,13 @@
     if (response.ok) {
         const data = await response.json();
         content = atob(data.content);
+        resave = content
         content = content.replace(/(\r\n|\n|\r)/g, " ");
         addend = content.split(' ').filter(word => !isNaN(word)).length +2;
         repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +addend);
         count = parseInt(repo)
+        count++;
+        resave = resave.replace(repo.toString(),count.toString())
         console.log(data);
 
     } else {
@@ -50,12 +54,17 @@
         'Content-Type': 'application/json',
         Authorization: `Bearer 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`,
       },
+    
+    
+    
+    
+    
     });
   }
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{error}{repo}{content}{addend}</h1>
+  <h1>Traffic Count: {count}{error}{repo}{content}{addend}{resave}</h1>
   <button on:click={increment}>Increment</button>
 </div>
 
