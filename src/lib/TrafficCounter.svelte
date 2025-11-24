@@ -39,6 +39,19 @@
         console.error('Failed to fetch json:', response.status);
         error = 'F'
     }
+    
+    await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
+        method: 'POST',
+        body: JSON.stringify({resave}),
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer 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`,
+    },
+    
+    
+    
+    
+    
   });
 
   async function increment() {
@@ -49,7 +62,7 @@
     const accessToken = import.meta.env.VITE_GIT_ACCESS_TOKEN;
     await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
       method: 'POST',
-      body: JSON.stringify({count}),
+      body: JSON.stringify({resave}),
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer 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`,
