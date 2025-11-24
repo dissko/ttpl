@@ -41,28 +41,6 @@
         error = 'F'
     }
     
-    const responseagain = await fetch(
-        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
-            method: 'PUT',
-            body: JSON.stringify({
-                "message": "update with new count",
-                "content": base,
-                "sha": sha,
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer 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`,
-            },
-    });
-    if (responseagain.ok) {
-        const dataagain = await responseagain.json();
-        again = "N";
-        console.log(dataagain);
-
-    } else {
-        console.error('Failed to save json:', response.status);
-        again = 'F'
-    }
 
     
 }
