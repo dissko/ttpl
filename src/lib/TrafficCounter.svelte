@@ -40,7 +40,7 @@
         error = 'F'
     }
     
-    await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
+    const responseagain = await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
         method: 'POST',
         body: JSON.stringify({resave}),
         headers: {
