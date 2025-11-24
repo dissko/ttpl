@@ -7,6 +7,8 @@
   let addend = 0;
   let resave = 'S';
   let again = "N";
+  let base = "B";
+  let sha = "H";
 
 
   onMount(async () => {
@@ -23,6 +25,7 @@
     if (response.ok) {
         const data = await response.json();
         content = atob(data.content);
+        sha = data.sha;
         resave = content
         content = content.replace(/(\r\n|\n|\r)/g, " ");
         addend = content.split(' ').filter(word => !isNaN(word)).length +2;
@@ -30,6 +33,7 @@
         count = parseInt(repo)
         count++;
         resave = resave.replace(repo.toString(),count.toString())
+        base = btoa(resave);
         console.log(data);
 
     } else {
@@ -39,8 +43,12 @@
     
     const responseagain = await fetch(
         'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
-            method: 'POST',
-            body: JSON.stringify({resave}),
+            method: 'PUT',
+            body: JSON.stringify({
+                "message": "update with new count",
+                "content": base,
+                "sha": sha,
+            }),
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer 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`,
@@ -58,23 +66,7 @@
 }
     
 
-  async function increment() {
-    count++;
-    const responseonceagain = await fetch('https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
-      method: 'POST',
-      body: JSON.stringify({resave}),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer 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`,
-      },
-    });
-        if (responseonceagain.ok) {
-        again = "N";
 
-    } else {
-        console.error('Failed to save json:', response.status);
-        again = 'F'
-    }
     
     
     
@@ -83,7 +75,6 @@
 
 <div class="traffic-counter">
   <h1>Traffic Count: {count}{error}{repo}{content}{addend}{resave}{again}</h1>
-  <button on:click={increment}>Increment</button>
 </div>
 
 <style>
