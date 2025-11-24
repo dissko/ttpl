@@ -26,7 +26,7 @@
         const data = await response.json();
         content = atob(data.content);
         addend = content.split(' ').filter(word => !isNaN(word)).length +2;
-        repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +3);
+        repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +addend);
         count = parseInt(repo)
         console.log(data);
 
