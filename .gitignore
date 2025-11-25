@@ -12,6 +12,8 @@ node_modules
 .DS_Store
 Thumbs.db
 
+src/traffic/map-count-0.md
+
 # Env
 .env
 .env.*
