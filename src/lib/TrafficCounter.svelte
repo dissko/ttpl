@@ -13,7 +13,7 @@
 
   onMount(async () => {
     const response = await fetch(
-        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md',
+        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/1.md',
         {
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@
     }
     
     const responseagain = await fetch(
-        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/map-count-0.md', {
+        'https://api.github.com/repos/nicksalt/ttpl/contents/src/traffic/1.md', {
             method: 'PUT',
             body: JSON.stringify({
                 "message": "update with new count",
