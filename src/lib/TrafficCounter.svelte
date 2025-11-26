@@ -1,82 +1,69 @@
 <script>
-  import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
+    const username = import.meta.env.VITE_GITHUB_USERNAME;
+    const repoName = import.meta.env.VITE_REPO_NAME;
+    const filePath = import.meta.env.VITE_FILE_PATH;
+    const token = import.meta.env.VITE_GITHUB_TOKEN;
   let count = 0;
-  let error = 'N'
-  let repo = 'R'
-  let content = 'C';
-  let addend = 0;
+  let error = ''
   let resave = 'S';
-  let again = "N";
   let base = "B";
   let sha = "H";
 
 
   onMount(async () => {
-    const response = await fetch(
-        'https://api.github.com/repos/dissko/ttpl/contents/src/traffic/1.md',
-        {
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer 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`,
-            },
-        
-        });
-    
-    if (response.ok) {
-        const data = await response.json();
-        content = atob(data.content);
-        sha = data.sha;
-        resave = content
-        content = content.replace(/(\r\n|\n|\r)/g, " ");
-        addend = content.split(' ').filter(word => !isNaN(word)).length +3;
-        repo = content.substring(content.indexOf(":") + 2, content.indexOf(":") +addend);
-        count = parseInt(repo)
-        count++;
-        resave = resave.replace(repo.toString(),count.toString())
-        base = btoa(resave);
-        console.log(data);
+    const url = `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`;
 
-    } else {
-        console.error('Failed to fetch json:', response.status);
-        error = 'F'
+    try {
+      // GET current file
+      const response = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      if (!response.ok) throw new Error(`Fetch failed: ${response.status}`);
+      const data = await response.json();
+
+      const decoded = atob(data.content);
+      resave = decoded;
+      const match = decoded.match(/(^|\n)count:\s*(\d+)/);
+      if (!match) throw new Error('count not found');
+      const current = parseInt(match[2], 10);
+      count = current + 1;
+
+      const updated = decoded.replace(/(^|\n)(count:\s*)\d+/, `$1$2${count}`);
+      base = btoa(updated);
+      sha = data.sha;
+
+      // PUT updated file
+      const responseagain = await fetch(url, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          message: 'update with new count',
+          content: base,
+          sha,
+        }),
+      });
+      if (!responseagain.ok) throw new Error(`Save failed: ${responseagain.status}`);
+      await responseagain.json();
+    } catch (e) {
+      console.error(e);
+      error = 'Failed to update traffic count';
     }
-    
-    const responseagain = await fetch(
-        'https://api.github.com/repos/dissko/ttpl/contents/src/traffic/1.md', {
-            method: 'PUT',
-            body: JSON.stringify({
-                "message": "update with new count",
-                "content": base,
-                "sha": sha,
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer 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`,
-            },
-    });
-    if (responseagain.ok) {
-        const dataagain = await responseagain.json();
-        again = "N";
-        console.log(dataagain);
-
-    } else {
-        console.error('Failed to save json:', response.status);
-        again = 'F'
-    }
-
-    
 });
-    
-
-
-    
-    
-    
 
 </script>
 
 <div class="traffic-counter">
-  <h1>Traffic Count: {count}{error}{repo}{content}{addend}{resave}{again}</h1>
+  <h1>Traffic Count: {count}</h1>
+  {#if error}
+    <p>{error}</p>
+  {/if}
 </div>
 
 <style>
