@@ -16,19 +16,12 @@
 
 	<!-- Calendar Embed -->
 	<section class="px-4 py-10">
-		<div class="container mx-auto">
-			<div class="overflow-hidden rounded-lg shadow-lg">
-				<iframe
-					title="Library Calendar"
-					src="content/calendar/MonthlyCalendars.jpg"
-					style="border:0"
-					width="100%"
-					height="600"
-					frameborder="0"
-					scrolling="no"
-				>
-				</iframe>
-			</div>
+     <p class="mt-auto text-xs">
+<img src="content/calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
+    </p>
+ 
+ 
+ 
 		</div>
 	</section>
 </main>
