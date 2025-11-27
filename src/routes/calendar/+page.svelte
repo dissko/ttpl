@@ -20,7 +20,7 @@
 			<div class="overflow-hidden rounded-lg shadow-lg">
 				<iframe
 					title="Library Calendar"
-					src="https://www.google.com/calendar/embed?src=tyendinagatwplibrary%40gmail.com&ctz=America/Toronto"
+					src="content/calendar/MonthlyCalendars.jpg"
 					style="border:0"
 					width="100%"
 					height="600"
