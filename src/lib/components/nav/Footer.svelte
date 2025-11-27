@@ -21,7 +21,7 @@
       Inspiring minds and fostering community engagement through knowledge and creativity.
     </p>
     <p class="mt-auto text-xs">
-
+      <TrafficCounter />
     </p>
     <p class="mt-auto text-xs">
       Copyright 2024, Tyendinaga Township Public Library. Website by
