@@ -18,7 +18,7 @@
 	<section class="px-4 py-10">
         <div>
             <p class="mt-auto text-xs">
-                <img src="content/calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
+                <img src="calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
             </p>
  
  
