@@ -16,9 +16,10 @@
 
 	<!-- Calendar Embed -->
 	<section class="px-4 py-10">
-     <p class="mt-auto text-xs">
-<img src="content/calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
-    </p>
+        <div>
+            <p class="mt-auto text-xs">
+                <img src="content/calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
+            </p>
  
  
  
