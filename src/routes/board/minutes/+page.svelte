@@ -23,7 +23,7 @@
 	<div class="breadcrumbs p-4 text-sm">
 		<ul>
 			<li><a href="/board">Library Board</a></li>
-			<li>Meeting Minnutes</li>
+			<li>Meeting Minutes</li>
 		</ul>
 	</div>
 	<main class="bg-base-100">
