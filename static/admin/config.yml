@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: nicksalt/ttpl
+  repo: dissko/ttpl
   branch: main
 
 
