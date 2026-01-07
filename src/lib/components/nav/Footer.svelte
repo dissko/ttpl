@@ -32,7 +32,9 @@
   <!-- Hours -->
   <div>
     <span class="footer-title">Hours</span>
-    <p>Tue - Thur: 10am - 8pm</p>
+    <p>Mon: Closed</p>
+    <p>Tues: 4pm - 8pm</p>
+    <p>Weds - Fri: 10am - 8pm</p>
     <p>Sat: 10am - 4pm</p>
     <p>Sun: Closed</p>
     <p><i>Closed Saturdays of long weekends</i></p>
