@@ -1,5 +1,5 @@
 ---
-title: Music and Motion1
+title: Music and Motion
 subtitle: Thursdays at 10:30 am
 image: https://res.cloudinary.com/dk3keqspt/image/upload/v1768415176/Music_in_Motion_not_cancelled_n8wbkx.png
 description: Music and Motion fills the library with an atmosphere of joy,
