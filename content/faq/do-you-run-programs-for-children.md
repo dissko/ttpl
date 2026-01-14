@@ -1,5 +1,5 @@
 ---
-question: Do you run programs for children?1
+question: Do you run programs for children?
 answer: >-
   Yes! Upcoming events will be posted in the library and on the Library Facebook
   page.
