@@ -1,5 +1,5 @@
 ---
-title: Murder Mystery Fundraiser1
+title: Murder Mystery Fundraiser
 description: >-
   A Night of Love & Murder - a horrible Library Fundraiser Murder Mystery
 
