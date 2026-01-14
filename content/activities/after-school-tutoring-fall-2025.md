@@ -1,5 +1,5 @@
 ---
-title: After School Tutoring1
+title: After School Tutoring
 image: https://res.cloudinary.com/dk3keqspt/image/upload/v1768414974/Tutoring_gvzqod.png
 order: 1
 description: Our After School Tutoring program is now open for registration!
