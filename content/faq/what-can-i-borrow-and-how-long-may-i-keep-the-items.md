@@ -1,5 +1,5 @@
 ---
-question: What can I borrow, and how long may I keep the items?1
+question: What can I borrow, and how long may I keep the items?
 answer: >-
   All library materials have a loan period of three weeks unless otherwise
   indicated: 
