@@ -1,13 +1,8 @@
 ---
 question: Do you take book or movie donations?
-answer: >-
-  Yes. Donations are appreciated, however, they must meet the following
-  criteria.
-
-
-  * Good condition: no mold, mildew, dirt or torn pages.
-
-  * Movies must be in DVD format, and in good working condition.
-
-  * If we cannot use the books in the library, they will be added to our bookstore to raise funds for the library. If the books are not needed for our shelves or our bookstore we may pass them on to second hand stores.
+answer: As a small, rural library we accept books on a case-by-case basis.  We
+  are generally looking for books that have been published in the past 5 years,
+  games, art supplies, and some toys for younger children that are in excellent
+  condition.  If you are looking at making a donation, please send information
+  to tyendinagatwplibrary@gmail.com.
 ---
