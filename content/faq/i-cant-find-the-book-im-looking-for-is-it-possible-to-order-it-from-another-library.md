@@ -1,6 +1,6 @@
 ---
 question: I can't find the book I'm looking for. Is it possible to order it from
-  another library?1
+  another library?
 answer: >-
   Yes! Inter Library Loan service is available to full-access patrons. In order
   to request a title, it must be over 2 years old.
