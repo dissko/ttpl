@@ -5,5 +5,5 @@ answer: >-
   page.
 
 
-  Some of our offerings for children include Fun Time Circle on Tuesdays and Saturdays, Rural Roots Playgroup on Wednesdays, and Music & Motion on Thursdays.
+  Some of our offerings for children include Fun Time Circle on Saturdays, Rural Roots Playgroup on Wednesdays, and Music & Motion on Thursdays.
 ---
