@@ -1,5 +1,5 @@
 ---
-label: Home Page Featured Events and Activities
+label: Home Page Featured Events and Activities1
 featured_events:
   - Book Club
   - Murder Mystery Fundraiser
