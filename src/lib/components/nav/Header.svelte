@@ -38,7 +38,11 @@
 <!-- Desktop Navbar -->
 <nav class="bg-base-200 hidden justify-center md:flex py-2">
 	<div class="hidden gap-2 md:flex">
-		<a class="btn btn-ghost btn-sm" href="/">Home</a>
+        <!-- "Special" Catalogue Button on Desktop -->
+        <a class="btn btn-primary ml-2 btn-sm" href="https://olsn.ent.sirsidynix.net/client/en_US/tyendinaga/">Online Catalogue</a>
+
+  
+        <a class="btn btn-ghost btn-sm" href="/">Home</a>
 		<AboutDropdown />
 		<a class="btn btn-ghost btn-sm" href="/activities">Activities</a>
 		<a class="btn btn-ghost btn-sm" href="/events">Events</a>
