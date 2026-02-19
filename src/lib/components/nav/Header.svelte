@@ -17,7 +17,15 @@
 		</button>
 
 		<ul tabIndex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-64 gap-2 p-4 shadow">
-			<li><a href="/">Home</a></li>
+            <!-- "Special"  Catalogue Button Button -->
+            <li>
+                <a href="https://olsn.ent.sirsidynix.net/client/en_US/tyendinaga/" class="btn btn-primary">
+                    Online Catalogue
+                </a>
+            </li>
+
+   
+            <li><a href="/">Home</a></li>
 			<li>
 				<AboutDropdown />
 			</li>
