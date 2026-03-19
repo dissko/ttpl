@@ -4,7 +4,9 @@
 		{ label: "Calendar", href: "/calendar" },
 		{ label: "FAQ", href: "/faq" },
 		{ label: "Library Board", href: "/board" },
-		{ label: "Services", href: "/services" }
+		{ label: "Services", href: "/services" },
+        { label: "2025 Annual Report", href: "/report" }
+
 	];
 </script>
 
