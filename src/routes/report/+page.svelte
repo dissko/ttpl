@@ -4,21 +4,21 @@
 </script>
 
 <SvelteSeo
-	title="Library Calendar - Tyendinaga Township Public Library"
-	description="Stay up to date with our events and programs."
-	canonical="https://ttpl.ca/calendar"
+	title="2025 Annual Report - Tyendinaga Township Public Library"
+	description=""
+	canonical="https://ttpl.ca/report"
 	keywords="tyendinaga, shannonville, belleville, ontario, library, books, events, community, resources"
 />
 
 <main class="bg-base-100">
 	<!-- Hero Section -->
-	<PageHeader title="Calendar" subtitle="Stay up to date with our events and programs." />
+	<PageHeader title="Report" subtitle="" />
 
 	<!-- Calendar Embed -->
 	<section class="px-4 py-10">
         <div>
             <p class="mt-auto text-xs">
-                <img src="calendar/MonthlyCalendars.jpg" alt="This Month's Calendar">
+                <img src="report/2025AnnualReport.jpg" alt="2025 Annual Report">
             </p>
  
  
