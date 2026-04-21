@@ -1,11 +1,8 @@
 ---
 label: Home Page Featured Events and Activities
 featured_events:
-  - Book Club
-  - Murder Mystery Fundraiser
+  - Kinder Prep Program 2026
 featured_activities:
+  - Summer Tutoring
   - 1000 Books Before Kindergarten
-  - Music and Motion
-  - Fun Time Circle
-  - After School Tutoring
 ---
