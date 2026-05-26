@@ -8,7 +8,6 @@
     // title should be "Upcoming Board Meeting" for agendas, "CEO Reports" for CEO reports, otherwise "Meeting Minutes - MMMM YYYY"
     const dateTitle = new Date(date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
-    // Decide title with clear precedence: agenda > CEO report > minutes
     const title = isAgenda
         ? `Upcoming Board Meeting - ${dateTitle}`
         : isCeo

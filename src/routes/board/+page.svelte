@@ -44,10 +44,8 @@
 <main class="bg-base-100">
 	<div class="container mx-auto px-4 py-8">
 		<BoardMembers members={boardMembers} />
-		{#if meetingAgendas.length > 0}
-			<MeetingMinutes meeting={meetingAgendas} isAgenda={true} />
-		{/if}
-		<MeetingMinutes meeting={meetingMinutes} isAgenda={false} />
+		<MeetingMinutes meeting={meetingMinutes} />
 		<LibraryPolicies {policies} />
 	</div>
 </main>
+
