@@ -29,7 +29,7 @@
 		}[];
 	};
 
-	const { boardMembers, policies, meetingMinutes, meetingAgendas } = data;
+	const { boardMembers, policies, meetingMinutes, meetingAgendas, CEOReports } = data;
 </script>
 
 <SvelteSeo
