@@ -5,16 +5,17 @@
     export let isAgenda: boolean = false; // New prop to differentiate between minutes and agendas
     export let isCeo: boolean = false; // New prop to differentiate between minutes and CEO report
 
-    // title should be "Upcoming Board Meeting" for agendas,"CEO Reports" for CEO reports, otherwise "Meeting Minutes - MMMM YYYY"
-    let dateTitle = new Date(date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    // title should be "Upcoming Board Meeting" for agendas, "CEO Reports" for CEO reports, otherwise "Meeting Minutes - MMMM YYYY"
+    const dateTitle = new Date(date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    // Decide title with clear precedence: agenda > CEO report > minutes
     const title = isAgenda
         ? `Upcoming Board Meeting - ${dateTitle}`
-        : `Board Meeting- ${dateTitle}`;
-    const title = isCEO
-        ? `Newest CEO Report- ${dateTitle}`
-        : `CEO Report- ${dateTitle}`;
+        : isCeo
+        ? `CEO Reports - ${dateTitle}`
+        : `Meeting Minutes - ${dateTitle}`;
 
-    // display Date should be DayOfWeek MMMM DD, YYYY
+    // display Date should be DayOfWeek MMMM DD, YYYY (leave unchanged)
     const displayDate = new Date(date).toLocaleDateString('en-US', {
         weekday: 'long',
         month: 'long',
