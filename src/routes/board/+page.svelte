@@ -22,6 +22,10 @@
 		meetingAgendas: {
 			date: string;
 			fileLink: string;
+        }[];
+        CEO Reports: {
+            date: string;
+            fileLink: string;
 		}[];
 	};
 
