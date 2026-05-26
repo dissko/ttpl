@@ -23,7 +23,7 @@
 			date: string;
 			fileLink: string;
         }[];
-        CEOReports: {
+        ceoReports: {
             date: string;
             fileLink: string;
 		}[];
