@@ -113,6 +113,17 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - { label: "PDF File", name: "fileLink", widget: "file" }
 
+  - name: "ceoReports"
+    label: "Library Board - CEO Reports"
+    folder: "content/ceo-reports"
+    create: true
+    identifier_field: "date"
+    slug: "{{date}}"
+    preview_path: "{{date}}"
+    fields:
+      - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { label: "PDF File", name: "fileLink", widget: "file" }
+
 
   # SERVICES
   - name: "services"
