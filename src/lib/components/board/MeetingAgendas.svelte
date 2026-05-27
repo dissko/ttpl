@@ -18,8 +18,6 @@
       {/each}
     </div>
 
-    <div class="mt-6 text-center">
-      <a href="/board/agendas" class="btn btn-secondary">View All Meeting Agendas</a>
-    </div>
+
   {/if}
 </section>
