@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MeetingMinuteItem from '../../MeetingMinuteItem.svelte';
+  import MeetingMinuteItem from './MeetingMinuteItem.svelte';
   export let meeting: { date: string; fileLink: string }[] = [];
 
   const heading = 'Meeting Agendas';
