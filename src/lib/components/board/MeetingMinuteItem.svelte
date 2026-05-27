@@ -9,7 +9,7 @@
     const dateTitle = new Date(date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
     const title = isAgenda
-        ? `Upcoming Board Meeting - ${dateTitle}`
+        ? `Board Meeting - ${dateTitle}`
         : isCeo
         ? `CEO Reports - ${dateTitle}`
         : `Meeting Minutes - ${dateTitle}`;
