@@ -22,6 +22,8 @@
         year: 'numeric',
         timeZone: 'UTC',
     });
+
+    const buttonLabel = isAgenda ? 'View Agenda' : (isCeo ? 'View Report' : 'Download');
 </script>
 
 <div class="card bg-base-100 shadow-md">
@@ -29,7 +31,7 @@
         <h3 class="card-title">{title}</h3>
         <p class="text-sm text-gray-600">{displayDate}</p>
         <div class="card-actions justify-end">
-            <a href={fileLink} target="_blank" class="btn btn-primary btn-sm">Download</a>
+            <a href={fileLink} target="_blank" class="btn btn-primary btn-sm">{buttonLabel}</a>
         </div>
     </div>
 </div>
