@@ -2,7 +2,7 @@
   import MeetingMinuteItem from './MeetingMinuteItem.svelte';
   export let meeting: { date: string; fileLink: string }[] = [];
 
-  const heading = 'Meeting Agendas';
+  const heading = 'CEO Reports';
   const topThree = meeting.slice(0, 3);
 </script>
 
@@ -14,7 +14,7 @@
   {:else}
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       {#each topThree as item}
-        <MeetingMinuteItem date={item.date} fileLink={item.fileLink} isAgenda={true} />
+        <MeetingMinuteItem date={item.date} fileLink={item.fileLink} isCeo={true} />
       {/each}
     </div>
 

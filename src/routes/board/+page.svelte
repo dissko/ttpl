@@ -4,6 +4,8 @@
 	import LibraryPolicies from '$lib/components/board/LibraryPolicies.svelte';
 	import MeetingMinutes from '$lib/components/board/MeetingMinutes.svelte';
 	import MeetingAgendas from '$lib/components/board/MeetingAgendas.svelte';
+    import ceoMeetings from '$lib/components/board/CeoMeetingsMeeting.svelte';
+
 	import SvelteSeo from 'svelte-seo';
 
 	export let data: {
