@@ -4,7 +4,7 @@
 	import LibraryPolicies from '$lib/components/board/LibraryPolicies.svelte';
 	import MeetingMinutes from '$lib/components/board/MeetingMinutes.svelte';
 	import MeetingAgendas from '$lib/components/board/MeetingAgendas.svelte';
-    import ceoReports from '$lib/components/board/CeoReports.svelte';
+    import CeoReports from '$lib/components/board/CeoReports.svelte';
 
 	import SvelteSeo from 'svelte-seo';
 
