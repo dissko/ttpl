@@ -3,6 +3,7 @@
 	import BoardMembers from '$lib/components/board/BoardMembers.svelte';
 	import LibraryPolicies from '$lib/components/board/LibraryPolicies.svelte';
 	import MeetingMinutes from '$lib/components/board/MeetingMinutes.svelte';
+	import MeetingAgendas from '$lib/components/board/MeetingAgendas.svelte';
 	import SvelteSeo from 'svelte-seo';
 
 	export let data: {
@@ -49,7 +50,9 @@
 	<div class="container mx-auto px-4 py-8">
 		<BoardMembers members={boardMembers} />
 		<MeetingMinutes meeting={meetingMinutes} />
+        <MeetingAgendas meeting={meetingAgendas} />
 		<LibraryPolicies {policies} />
 	</div>
 </main>
+
 
