@@ -51,8 +51,10 @@
 		<BoardMembers members={boardMembers} />
 		<MeetingMinutes meeting={meetingMinutes} />
         <MeetingAgendas meeting={meetingAgendas} />
+        <MeetingMinutes meeting={ceoReports} isCeo={true} />
 		<LibraryPolicies {policies} />
 	</div>
 </main>
+
 
 
