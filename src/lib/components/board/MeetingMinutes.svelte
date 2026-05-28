@@ -8,7 +8,23 @@
     const inferIsCeo = (item: any) => {
         const link: string = item?.fileLink ?? '';
         const explicit: boolean = Boolean(item?.isCeo);
-        return explicit || /(^|\/)ceo(\b|\/|\.)/i.test(link);
+
+        // Check various potential metadata fields for source path or collection
+        const collection: string = (item?.collection ?? '').toString();
+        const pathA: string = (item?._path ?? '').toString();
+        const pathB: string = (item?.path ?? '').toString();
+        const pathC: string = (item?.filePath ?? '').toString();
+        const fromContentFolder = /content\/(ceo-reports|ceo_reports|ceo)/i;
+
+        const pathMatches =
+            fromContentFolder.test(collection) ||
+            fromContentFolder.test(pathA) ||
+            fromContentFolder.test(pathB) ||
+            fromContentFolder.test(pathC);
+
+        const linkMatches = /(^|\/)ceo(\b|\/|\.)/i.test(link);
+
+        return explicit || pathMatches || linkMatches;
     };
 
     // Determine if this section is CEO reports (majority or all items inferred as CEO)
