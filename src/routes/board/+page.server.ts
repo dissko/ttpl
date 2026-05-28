@@ -8,8 +8,9 @@ export async function load() {
     const policies = await loadPolicies();
     const meetingMinutes = await loadMeetingMinutes();
     const meetingAgendas = await loadMeetingAgendas();
+    const ceoReports = await loadCeoReports();
 
-    return { boardMembers: boardMembers, policies: policies, meetingMinutes: meetingMinutes, meetingAgendas: meetingAgendas };
+    return { boardMembers: boardMembers, policies: policies, meetingMinutes: meetingMinutes, meetingAgendas: meetingAgendas, ceoReports: ceoReports };
 }
 
 async function loadBoardMembers() {
@@ -123,4 +124,33 @@ async function loadMeetingAgendas(){
         })
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+}
+
+async function loadCeoReports(){
+    const ceoReportsDir = path.resolve('content/ceo-reports');
+    // if the directory doesn't exist, return an empty array
+    if (!fs.existsSync(ceoReportsDir)) {
+        console.error('No CEO Reports directory found');
+        return [];
+    }
+    const files = fs.readdirSync(ceoReportsDir);
+
+    // if files is empty, return an empty array
+    if (!files.length) {
+        return [];
+    }
+    return files
+        .map((filename) => {
+            const filePath = path.join(ceoReportsDir, filename);
+            const fileContent = fs.readFileSync(filePath, 'utf-8');
+            const { data } = matter(fileContent);
+
+            return {
+                date: data.date,
+                fileLink: data.fileLink,
+                filePath: filePath,
+                isCeo: true
+            };
+        })
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
