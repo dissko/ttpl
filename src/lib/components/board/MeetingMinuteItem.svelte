@@ -23,7 +23,7 @@
         timeZone: 'UTC',
     });
 
-    const buttonLabel = isAgenda ? 'View Agenda' : (isCeo ? 'View Report' : 'Download');
+    const buttonLabel = isAgenda ? 'View Agenda' : (isCeo ? 'View Report' : 'View Minutes');
 </script>
 
 <div class="card bg-base-100 shadow-md">
@@ -35,3 +35,4 @@
         </div>
     </div>
 </div>
+
